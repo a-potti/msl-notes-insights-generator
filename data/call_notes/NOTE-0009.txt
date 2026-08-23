@@ -1,0 +1,17 @@
+MSL Call Note | NOTE-0009
+Date: 2025-11-07 | MSL: J. Whitcombe (MSL-06) | Region: US-East
+HCP: Dr. K. Kowalczyk (KOL-029), Northgate University Hospital
+Interaction type: Unsolicited inbound
+
+Key points:
+- For a newly diagnosed 28 year old he reaches for the oral agent because it works fast and needs no infusion visit.
+- He said his first four patients took closer to 8 weeks before they saw meaningful symptom improvement, which surprised him given how the AURORA-1 curves look.
+- Rescheduled from last Tuesday due to his clinic overrunning.
+- He is travelling to the congress and offered to meet there.
+- Shared the published induction manuscript reprint.
+- Asked whether TL1A expression predicts response and whether there is a companion assay in development.
+- Asked whether there is a patient support programme with reminders. Did not know one existed.
+- Considers TL1A and IL-23 the same tier. Mechanism story is interesting but not decision-changing for him.
+- The community group next door will not stock it - the acquisition cost versus reimbursement does not work for them.
+
+Follow-up: Share the open study list once cleared.

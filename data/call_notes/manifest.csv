@@ -1,0 +1,141 @@
+note_id,date,msl_id,msl_name,region,kol_id,kol_name,institution,kol_tier,interaction_type,n_chars,split
+NOTE-0001,2026-02-10,MSL-05,M. Haddad,US-Central,KOL-025,Dr. R. Pemberton,Cedar Ridge Health System,2,1:1 meeting,630,dev
+NOTE-0002,2026-07-02,MSL-02,S. Lindqvist,EMEA,KOL-039,Dr. C. Corrigan,Hôpital Saint-Brieuc-sur-Loire,2,Advisory board follow-up,516,dev
+NOTE-0003,2026-06-17,MSL-04,A. Ferreira,EMEA,KOL-006,Dr. J. Baptiste,Hôpital Saint-Brieuc-sur-Loire,3,1:1 meeting,659,dev
+NOTE-0004,2026-06-03,MSL-01,R. Okafor,US-East,KOL-012,Dr. A. Maddox,Brightwater Medical Center,2,1:1 meeting,534,dev
+NOTE-0005,2025-11-29,MSL-05,M. Haddad,US-Central,KOL-007,Dr. F. Castellanos,Cedar Ridge Health System,3,Unsolicited inbound,522,dev
+NOTE-0006,2026-07-25,MSL-07,P. Raman,APAC,KOL-014,Dr. S. Bello,Harbourview Institute of Digestive Health,2,Advisory board follow-up,614,dev
+NOTE-0007,2026-07-02,MSL-06,J. Whitcombe,US-East,KOL-012,Dr. A. Maddox,Brightwater Medical Center,2,Congress interaction,577,dev
+NOTE-0008,2026-02-28,MSL-01,R. Okafor,US-East,KOL-032,Dr. S. Lindqvist,Brightwater Medical Center,1,Congress interaction,761,dev
+NOTE-0009,2025-11-07,MSL-06,J. Whitcombe,US-East,KOL-029,Dr. K. Kowalczyk,Northgate University Hospital,1,Unsolicited inbound,1138,dev
+NOTE-0010,2025-11-02,MSL-03,D. Cheng,US-West,KOL-030,Dr. G. Xu,Fairmount Colorectal Group,3,Virtual call,485,dev
+NOTE-0011,2026-04-22,MSL-06,J. Whitcombe,US-East,KOL-028,Dr. T. Farrow,Northgate University Hospital,2,1:1 meeting,394,dev
+NOTE-0012,2025-11-30,MSL-02,S. Lindqvist,EMEA,KOL-038,Dr. L. Rasmussen,Universitätsklinikum Rheinfeld,2,Advisory board follow-up,603,dev
+NOTE-0013,2026-01-04,MSL-02,S. Lindqvist,EMEA,KOL-010,Dr. P. Achterberg,Hôpital Saint-Brieuc-sur-Loire,2,Unsolicited inbound,746,dev
+NOTE-0014,2026-04-04,MSL-07,P. Raman,APAC,KOL-014,Dr. S. Bello,Harbourview Institute of Digestive Health,2,Advisory board follow-up,518,dev
+NOTE-0015,2026-01-24,MSL-02,S. Lindqvist,EMEA,KOL-002,Dr. B. Hollingsworth,St. Aldric's Hospital,2,Virtual call,568,dev
+NOTE-0016,2026-06-11,MSL-05,M. Haddad,US-Central,KOL-025,Dr. R. Pemberton,Cedar Ridge Health System,2,Congress interaction,468,dev
+NOTE-0017,2026-07-18,MSL-06,J. Whitcombe,US-East,KOL-018,Dr. A. Nystrom,Ashgrove Community GI,3,Congress interaction,579,dev
+NOTE-0018,2025-09-21,MSL-05,M. Haddad,US-Central,KOL-025,Dr. R. Pemberton,Cedar Ridge Health System,2,Investigator meeting,660,dev
+NOTE-0019,2025-12-24,MSL-02,S. Lindqvist,EMEA,KOL-038,Dr. L. Rasmussen,Universitätsklinikum Rheinfeld,2,Virtual call,412,dev
+NOTE-0020,2025-12-30,MSL-08,L. Novak,EMEA,KOL-003,Dr. S. Vandermeer,Royal Thornbury Infirmary,2,1:1 meeting,599,dev
+NOTE-0021,2026-02-03,MSL-02,S. Lindqvist,EMEA,KOL-022,Dr. C. Aldridge,St. Aldric's Hospital,2,Investigator meeting,423,dev
+NOTE-0022,2026-04-10,MSL-08,L. Novak,EMEA,KOL-038,Dr. L. Rasmussen,Universitätsklinikum Rheinfeld,2,Virtual call,389,dev
+NOTE-0023,2026-05-07,MSL-08,L. Novak,EMEA,KOL-038,Dr. L. Rasmussen,Universitätsklinikum Rheinfeld,2,Congress interaction,535,dev
+NOTE-0024,2026-07-26,MSL-08,L. Novak,EMEA,KOL-015,Dr. I. Grigoryan,St. Aldric's Hospital,1,Investigator meeting,454,dev
+NOTE-0025,2026-04-19,MSL-05,M. Haddad,US-Central,KOL-040,Dr. W. Eriksen,Cedar Ridge Health System,2,Unsolicited inbound,553,dev
+NOTE-0026,2025-11-16,MSL-05,M. Haddad,US-Central,KOL-035,Dr. S. Thibault,Cedar Ridge Health System,2,Advisory board follow-up,619,dev
+NOTE-0027,2025-10-29,MSL-01,R. Okafor,US-East,KOL-028,Dr. T. Farrow,Northgate University Hospital,2,Virtual call,707,dev
+NOTE-0028,2026-08-03,MSL-05,M. Haddad,US-Central,KOL-040,Dr. W. Eriksen,Cedar Ridge Health System,2,Investigator meeting,475,dev
+NOTE-0029,2026-03-26,MSL-06,J. Whitcombe,US-East,KOL-034,Dr. C. Quintero,Brightwater Medical Center,1,Investigator meeting,770,dev
+NOTE-0030,2026-03-13,MSL-03,D. Cheng,US-West,KOL-021,Dr. W. Zambrano,Sunridge Digestive Institute,2,Congress interaction,594,dev
+NOTE-0031,2026-01-08,MSL-02,S. Lindqvist,EMEA,KOL-038,Dr. L. Rasmussen,Universitätsklinikum Rheinfeld,2,Advisory board follow-up,637,dev
+NOTE-0032,2026-07-03,MSL-02,S. Lindqvist,EMEA,KOL-002,Dr. B. Hollingsworth,St. Aldric's Hospital,2,Advisory board follow-up,420,dev
+NOTE-0033,2026-06-19,MSL-04,A. Ferreira,EMEA,KOL-002,Dr. B. Hollingsworth,St. Aldric's Hospital,2,Virtual call,514,dev
+NOTE-0034,2025-11-24,MSL-05,M. Haddad,US-Central,KOL-036,Dr. T. Janowski,Lakeshore Gastroenterology Associates,1,Advisory board follow-up,591,dev
+NOTE-0035,2026-03-04,MSL-03,D. Cheng,US-West,KOL-031,Dr. D. Nkemdirim,Pacific Crest Medical Center,2,Investigator meeting,619,dev
+NOTE-0036,2025-11-13,MSL-05,M. Haddad,US-Central,KOL-007,Dr. F. Castellanos,Cedar Ridge Health System,3,Congress interaction,612,dev
+NOTE-0037,2026-06-03,MSL-04,A. Ferreira,EMEA,KOL-010,Dr. P. Achterberg,Hôpital Saint-Brieuc-sur-Loire,2,Congress interaction,460,dev
+NOTE-0038,2026-01-31,MSL-02,S. Lindqvist,EMEA,KOL-003,Dr. S. Vandermeer,Royal Thornbury Infirmary,2,Advisory board follow-up,579,dev
+NOTE-0039,2026-06-02,MSL-01,R. Okafor,US-East,KOL-018,Dr. A. Nystrom,Ashgrove Community GI,3,Virtual call,673,dev
+NOTE-0040,2025-10-23,MSL-06,J. Whitcombe,US-East,KOL-029,Dr. K. Kowalczyk,Northgate University Hospital,1,1:1 meeting,688,dev
+NOTE-0041,2026-06-18,MSL-08,L. Novak,EMEA,KOL-006,Dr. J. Baptiste,Hôpital Saint-Brieuc-sur-Loire,3,Unsolicited inbound,522,dev
+NOTE-0042,2026-01-27,MSL-05,M. Haddad,US-Central,KOL-005,Dr. A. Halvorsen,Lakeshore Gastroenterology Associates,2,1:1 meeting,598,dev
+NOTE-0043,2025-12-01,MSL-05,M. Haddad,US-Central,KOL-019,Dr. R. Kirkbride,Cedar Ridge Health System,3,Advisory board follow-up,394,dev
+NOTE-0044,2026-01-06,MSL-05,M. Haddad,US-Central,KOL-035,Dr. S. Thibault,Cedar Ridge Health System,2,Virtual call,936,dev
+NOTE-0045,2026-01-10,MSL-08,L. Novak,EMEA,KOL-039,Dr. C. Corrigan,Hôpital Saint-Brieuc-sur-Loire,2,Congress interaction,375,dev
+NOTE-0046,2025-10-12,MSL-01,R. Okafor,US-East,KOL-034,Dr. C. Quintero,Brightwater Medical Center,1,Congress interaction,626,dev
+NOTE-0047,2026-06-10,MSL-05,M. Haddad,US-Central,KOL-027,Dr. O. Duvall,Cedar Ridge Health System,1,Investigator meeting,530,dev
+NOTE-0048,2026-04-12,MSL-03,D. Cheng,US-West,KOL-031,Dr. D. Nkemdirim,Pacific Crest Medical Center,2,Unsolicited inbound,459,dev
+NOTE-0049,2026-04-17,MSL-07,P. Raman,APAC,KOL-004,Dr. G. Iyengar,Harbourview Institute of Digestive Health,2,Advisory board follow-up,598,dev
+NOTE-0050,2025-11-16,MSL-03,D. Cheng,US-West,KOL-001,Dr. J. Saito,Fairmount Colorectal Group,2,Congress interaction,511,dev
+NOTE-0051,2026-04-28,MSL-04,A. Ferreira,EMEA,KOL-003,Dr. S. Vandermeer,Royal Thornbury Infirmary,2,Virtual call,604,dev
+NOTE-0052,2026-07-23,MSL-08,L. Novak,EMEA,KOL-015,Dr. I. Grigoryan,St. Aldric's Hospital,1,Advisory board follow-up,480,dev
+NOTE-0053,2026-02-18,MSL-06,J. Whitcombe,US-East,KOL-026,Dr. E. Yilmaz,Northgate University Hospital,2,Unsolicited inbound,579,dev
+NOTE-0054,2026-01-06,MSL-06,J. Whitcombe,US-East,KOL-028,Dr. T. Farrow,Northgate University Hospital,2,Advisory board follow-up,881,dev
+NOTE-0055,2025-10-03,MSL-03,D. Cheng,US-West,KOL-031,Dr. D. Nkemdirim,Pacific Crest Medical Center,2,1:1 meeting,479,dev
+NOTE-0056,2026-06-18,MSL-02,S. Lindqvist,EMEA,KOL-003,Dr. S. Vandermeer,Royal Thornbury Infirmary,2,Unsolicited inbound,490,dev
+NOTE-0057,2026-04-01,MSL-02,S. Lindqvist,EMEA,KOL-003,Dr. S. Vandermeer,Royal Thornbury Infirmary,2,Congress interaction,509,dev
+NOTE-0058,2026-02-22,MSL-01,R. Okafor,US-East,KOL-008,Dr. S. Jelinek,Brightwater Medical Center,3,Advisory board follow-up,530,dev
+NOTE-0059,2026-06-15,MSL-04,A. Ferreira,EMEA,KOL-003,Dr. S. Vandermeer,Royal Thornbury Infirmary,2,Investigator meeting,617,dev
+NOTE-0060,2026-03-17,MSL-03,D. Cheng,US-West,KOL-033,Dr. G. Larue,Fairmount Colorectal Group,1,Advisory board follow-up,461,dev
+NOTE-0061,2025-10-14,MSL-04,A. Ferreira,EMEA,KOL-015,Dr. I. Grigoryan,St. Aldric's Hospital,1,Virtual call,574,test
+NOTE-0062,2026-05-24,MSL-04,A. Ferreira,EMEA,KOL-006,Dr. J. Baptiste,Hôpital Saint-Brieuc-sur-Loire,3,1:1 meeting,587,test
+NOTE-0063,2025-11-01,MSL-06,J. Whitcombe,US-East,KOL-026,Dr. E. Yilmaz,Northgate University Hospital,2,Unsolicited inbound,817,test
+NOTE-0064,2025-10-17,MSL-05,M. Haddad,US-Central,KOL-016,Dr. D. Fitzharris,Cedar Ridge Health System,1,Congress interaction,462,test
+NOTE-0065,2026-01-18,MSL-04,A. Ferreira,EMEA,KOL-024,Dr. A. Gallardo,St. Aldric's Hospital,2,Investigator meeting,493,test
+NOTE-0066,2026-05-05,MSL-05,M. Haddad,US-Central,KOL-007,Dr. F. Castellanos,Cedar Ridge Health System,3,Congress interaction,640,test
+NOTE-0067,2026-01-21,MSL-01,R. Okafor,US-East,KOL-011,Dr. M. Wexler,Ashgrove Community GI,1,Advisory board follow-up,646,test
+NOTE-0068,2026-03-15,MSL-03,D. Cheng,US-West,KOL-030,Dr. G. Xu,Fairmount Colorectal Group,3,Unsolicited inbound,475,test
+NOTE-0069,2026-05-04,MSL-06,J. Whitcombe,US-East,KOL-013,Dr. A. Dziedzic,Ashgrove Community GI,3,Advisory board follow-up,622,test
+NOTE-0070,2026-06-10,MSL-02,S. Lindqvist,EMEA,KOL-015,Dr. I. Grigoryan,St. Aldric's Hospital,1,Advisory board follow-up,497,test
+NOTE-0071,2026-07-08,MSL-04,A. Ferreira,EMEA,KOL-022,Dr. C. Aldridge,St. Aldric's Hospital,2,Investigator meeting,628,test
+NOTE-0072,2026-03-18,MSL-04,A. Ferreira,EMEA,KOL-024,Dr. A. Gallardo,St. Aldric's Hospital,2,Congress interaction,620,test
+NOTE-0073,2026-01-29,MSL-02,S. Lindqvist,EMEA,KOL-010,Dr. P. Achterberg,Hôpital Saint-Brieuc-sur-Loire,2,Virtual call,611,test
+NOTE-0074,2026-04-30,MSL-03,D. Cheng,US-West,KOL-021,Dr. W. Zambrano,Sunridge Digestive Institute,2,Unsolicited inbound,479,test
+NOTE-0075,2025-11-29,MSL-01,R. Okafor,US-East,KOL-034,Dr. C. Quintero,Brightwater Medical Center,1,Investigator meeting,389,test
+NOTE-0076,2026-01-30,MSL-03,D. Cheng,US-West,KOL-001,Dr. J. Saito,Fairmount Colorectal Group,2,1:1 meeting,505,test
+NOTE-0077,2026-01-28,MSL-02,S. Lindqvist,EMEA,KOL-015,Dr. I. Grigoryan,St. Aldric's Hospital,1,Advisory board follow-up,572,test
+NOTE-0078,2026-05-01,MSL-01,R. Okafor,US-East,KOL-012,Dr. A. Maddox,Brightwater Medical Center,2,Unsolicited inbound,573,test
+NOTE-0079,2026-06-29,MSL-07,P. Raman,APAC,KOL-037,Dr. R. Moreau,Meridian General Hospital,3,Congress interaction,545,test
+NOTE-0080,2026-05-24,MSL-05,M. Haddad,US-Central,KOL-007,Dr. F. Castellanos,Cedar Ridge Health System,3,Unsolicited inbound,546,test
+NOTE-0081,2026-06-17,MSL-02,S. Lindqvist,EMEA,KOL-022,Dr. C. Aldridge,St. Aldric's Hospital,2,Investigator meeting,591,test
+NOTE-0082,2025-12-01,MSL-04,A. Ferreira,EMEA,KOL-015,Dr. I. Grigoryan,St. Aldric's Hospital,1,Investigator meeting,717,test
+NOTE-0083,2026-04-03,MSL-06,J. Whitcombe,US-East,KOL-013,Dr. A. Dziedzic,Ashgrove Community GI,3,Advisory board follow-up,563,test
+NOTE-0084,2026-03-02,MSL-02,S. Lindqvist,EMEA,KOL-010,Dr. P. Achterberg,Hôpital Saint-Brieuc-sur-Loire,2,Unsolicited inbound,590,test
+NOTE-0085,2026-01-16,MSL-04,A. Ferreira,EMEA,KOL-003,Dr. S. Vandermeer,Royal Thornbury Infirmary,2,Unsolicited inbound,796,test
+NOTE-0086,2026-05-09,MSL-03,D. Cheng,US-West,KOL-023,Dr. T. Espinoza,Sunridge Digestive Institute,1,1:1 meeting,477,test
+NOTE-0087,2026-05-17,MSL-08,L. Novak,EMEA,KOL-002,Dr. B. Hollingsworth,St. Aldric's Hospital,2,Congress interaction,1020,test
+NOTE-0088,2026-03-20,MSL-08,L. Novak,EMEA,KOL-010,Dr. P. Achterberg,Hôpital Saint-Brieuc-sur-Loire,2,Congress interaction,393,test
+NOTE-0089,2026-02-05,MSL-02,S. Lindqvist,EMEA,KOL-010,Dr. P. Achterberg,Hôpital Saint-Brieuc-sur-Loire,2,Advisory board follow-up,519,test
+NOTE-0090,2025-09-20,MSL-08,L. Novak,EMEA,KOL-039,Dr. C. Corrigan,Hôpital Saint-Brieuc-sur-Loire,2,Congress interaction,439,test
+NOTE-0091,2026-06-07,MSL-07,P. Raman,APAC,KOL-014,Dr. S. Bello,Harbourview Institute of Digestive Health,2,1:1 meeting,707,test
+NOTE-0092,2025-12-06,MSL-02,S. Lindqvist,EMEA,KOL-024,Dr. A. Gallardo,St. Aldric's Hospital,2,Unsolicited inbound,475,test
+NOTE-0093,2026-05-16,MSL-08,L. Novak,EMEA,KOL-039,Dr. C. Corrigan,Hôpital Saint-Brieuc-sur-Loire,2,Investigator meeting,413,test
+NOTE-0094,2026-06-03,MSL-07,P. Raman,APAC,KOL-014,Dr. S. Bello,Harbourview Institute of Digestive Health,2,Virtual call,747,test
+NOTE-0095,2025-10-06,MSL-01,R. Okafor,US-East,KOL-026,Dr. E. Yilmaz,Northgate University Hospital,2,Investigator meeting,595,test
+NOTE-0096,2026-01-16,MSL-03,D. Cheng,US-West,KOL-030,Dr. G. Xu,Fairmount Colorectal Group,3,Unsolicited inbound,619,test
+NOTE-0097,2026-03-20,MSL-04,A. Ferreira,EMEA,KOL-038,Dr. L. Rasmussen,Universitätsklinikum Rheinfeld,2,Unsolicited inbound,556,test
+NOTE-0098,2026-03-20,MSL-06,J. Whitcombe,US-East,KOL-012,Dr. A. Maddox,Brightwater Medical Center,2,1:1 meeting,560,test
+NOTE-0099,2026-03-17,MSL-02,S. Lindqvist,EMEA,KOL-020,Dr. C. Imhoff,Royal Thornbury Infirmary,1,Advisory board follow-up,602,test
+NOTE-0100,2026-06-16,MSL-05,M. Haddad,US-Central,KOL-019,Dr. R. Kirkbride,Cedar Ridge Health System,3,1:1 meeting,505,test
+NOTE-0101,2025-12-18,MSL-01,R. Okafor,US-East,KOL-032,Dr. S. Lindqvist,Brightwater Medical Center,1,Advisory board follow-up,769,holdout
+NOTE-0102,2025-11-05,MSL-08,L. Novak,EMEA,KOL-002,Dr. B. Hollingsworth,St. Aldric's Hospital,2,Unsolicited inbound,616,holdout
+NOTE-0103,2026-05-06,MSL-03,D. Cheng,US-West,KOL-001,Dr. J. Saito,Fairmount Colorectal Group,2,Investigator meeting,917,holdout
+NOTE-0104,2026-05-21,MSL-05,M. Haddad,US-Central,KOL-007,Dr. F. Castellanos,Cedar Ridge Health System,3,Advisory board follow-up,624,holdout
+NOTE-0105,2025-12-24,MSL-08,L. Novak,EMEA,KOL-022,Dr. C. Aldridge,St. Aldric's Hospital,2,Advisory board follow-up,604,holdout
+NOTE-0106,2025-10-19,MSL-01,R. Okafor,US-East,KOL-028,Dr. T. Farrow,Northgate University Hospital,2,Investigator meeting,493,holdout
+NOTE-0107,2026-02-05,MSL-01,R. Okafor,US-East,KOL-032,Dr. S. Lindqvist,Brightwater Medical Center,1,Congress interaction,677,holdout
+NOTE-0108,2025-10-31,MSL-08,L. Novak,EMEA,KOL-003,Dr. S. Vandermeer,Royal Thornbury Infirmary,2,Virtual call,403,holdout
+NOTE-0109,2026-01-16,MSL-07,P. Raman,APAC,KOL-004,Dr. G. Iyengar,Harbourview Institute of Digestive Health,2,1:1 meeting,605,holdout
+NOTE-0110,2025-11-21,MSL-01,R. Okafor,US-East,KOL-029,Dr. K. Kowalczyk,Northgate University Hospital,1,Virtual call,589,holdout
+NOTE-0111,2026-02-12,MSL-05,M. Haddad,US-Central,KOL-019,Dr. R. Kirkbride,Cedar Ridge Health System,3,Unsolicited inbound,383,holdout
+NOTE-0112,2026-02-16,MSL-04,A. Ferreira,EMEA,KOL-015,Dr. I. Grigoryan,St. Aldric's Hospital,1,Unsolicited inbound,636,holdout
+NOTE-0113,2026-06-08,MSL-08,L. Novak,EMEA,KOL-002,Dr. B. Hollingsworth,St. Aldric's Hospital,2,1:1 meeting,363,holdout
+NOTE-0114,2025-09-24,MSL-02,S. Lindqvist,EMEA,KOL-038,Dr. L. Rasmussen,Universitätsklinikum Rheinfeld,2,Congress interaction,596,holdout
+NOTE-0115,2026-03-23,MSL-05,M. Haddad,US-Central,KOL-005,Dr. A. Halvorsen,Lakeshore Gastroenterology Associates,2,1:1 meeting,576,holdout
+NOTE-0116,2026-05-19,MSL-04,A. Ferreira,EMEA,KOL-020,Dr. C. Imhoff,Royal Thornbury Infirmary,1,Investigator meeting,529,holdout
+NOTE-0117,2026-07-15,MSL-04,A. Ferreira,EMEA,KOL-022,Dr. C. Aldridge,St. Aldric's Hospital,2,Virtual call,695,holdout
+NOTE-0118,2026-06-16,MSL-07,P. Raman,APAC,KOL-037,Dr. R. Moreau,Meridian General Hospital,3,Virtual call,818,holdout
+NOTE-0119,2026-04-15,MSL-03,D. Cheng,US-West,KOL-023,Dr. T. Espinoza,Sunridge Digestive Institute,1,Virtual call,527,holdout
+NOTE-0120,2025-11-18,MSL-04,A. Ferreira,EMEA,KOL-039,Dr. C. Corrigan,Hôpital Saint-Brieuc-sur-Loire,2,Virtual call,540,holdout
+NOTE-0121,2026-05-20,MSL-05,M. Haddad,US-Central,KOL-019,Dr. R. Kirkbride,Cedar Ridge Health System,3,Advisory board follow-up,394,holdout
+NOTE-0122,2026-01-15,MSL-04,A. Ferreira,EMEA,KOL-039,Dr. C. Corrigan,Hôpital Saint-Brieuc-sur-Loire,2,Unsolicited inbound,722,holdout
+NOTE-0123,2026-03-18,MSL-04,A. Ferreira,EMEA,KOL-038,Dr. L. Rasmussen,Universitätsklinikum Rheinfeld,2,Investigator meeting,476,holdout
+NOTE-0124,2025-11-26,MSL-07,P. Raman,APAC,KOL-004,Dr. G. Iyengar,Harbourview Institute of Digestive Health,2,Congress interaction,613,holdout
+NOTE-0125,2026-03-14,MSL-06,J. Whitcombe,US-East,KOL-029,Dr. K. Kowalczyk,Northgate University Hospital,1,Congress interaction,604,holdout
+NOTE-0126,2026-03-23,MSL-07,P. Raman,APAC,KOL-004,Dr. G. Iyengar,Harbourview Institute of Digestive Health,2,Virtual call,559,holdout
+NOTE-0127,2026-07-28,MSL-08,L. Novak,EMEA,KOL-002,Dr. B. Hollingsworth,St. Aldric's Hospital,2,Advisory board follow-up,521,holdout
+NOTE-0128,2025-12-10,MSL-06,J. Whitcombe,US-East,KOL-026,Dr. E. Yilmaz,Northgate University Hospital,2,Advisory board follow-up,442,holdout
+NOTE-0129,2026-05-21,MSL-06,J. Whitcombe,US-East,KOL-008,Dr. S. Jelinek,Brightwater Medical Center,3,Advisory board follow-up,745,holdout
+NOTE-0130,2025-11-04,MSL-04,A. Ferreira,EMEA,KOL-038,Dr. L. Rasmussen,Universitätsklinikum Rheinfeld,2,Investigator meeting,603,holdout
+NOTE-0131,2025-12-31,MSL-06,J. Whitcombe,US-East,KOL-011,Dr. M. Wexler,Ashgrove Community GI,1,Advisory board follow-up,461,holdout
+NOTE-0132,2026-07-11,MSL-03,D. Cheng,US-West,KOL-017,Dr. M. Ostrowski,Pacific Crest Medical Center,1,Unsolicited inbound,912,holdout
+NOTE-0133,2025-11-12,MSL-01,R. Okafor,US-East,KOL-029,Dr. K. Kowalczyk,Northgate University Hospital,1,Unsolicited inbound,538,holdout
+NOTE-0134,2025-09-24,MSL-01,R. Okafor,US-East,KOL-012,Dr. A. Maddox,Brightwater Medical Center,2,Unsolicited inbound,737,holdout
+NOTE-0135,2026-07-18,MSL-04,A. Ferreira,EMEA,KOL-039,Dr. C. Corrigan,Hôpital Saint-Brieuc-sur-Loire,2,Unsolicited inbound,761,holdout
+NOTE-0136,2025-10-20,MSL-07,P. Raman,APAC,KOL-037,Dr. R. Moreau,Meridian General Hospital,3,Virtual call,581,holdout
+NOTE-0137,2026-05-05,MSL-02,S. Lindqvist,EMEA,KOL-039,Dr. C. Corrigan,Hôpital Saint-Brieuc-sur-Loire,2,Congress interaction,644,holdout
+NOTE-0138,2026-01-03,MSL-08,L. Novak,EMEA,KOL-015,Dr. I. Grigoryan,St. Aldric's Hospital,1,1:1 meeting,618,holdout
+NOTE-0139,2025-12-18,MSL-01,R. Okafor,US-East,KOL-018,Dr. A. Nystrom,Ashgrove Community GI,3,1:1 meeting,618,holdout
+NOTE-0140,2026-04-27,MSL-04,A. Ferreira,EMEA,KOL-022,Dr. C. Aldridge,St. Aldric's Hospital,2,Unsolicited inbound,593,holdout

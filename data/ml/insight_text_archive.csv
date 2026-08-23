@@ -1,0 +1,509 @@
+text_id,text,label,variant_group,topic_group
+ARC-00089,Wanted a plain answer on serious infection rates vs the oral agents. Felt the label alone does not let him have,SAFETY_TOLERABILITY,S06-V1,S06
+ARC-00362,Said his no-show rate for maintenance is climbing among patinets in remission.,PATIENT_EXPERIENCE_ADHERENCE,S27-V1,S27
+ARC-00357,Adherence drops off once patients feel better. He wants something patient-facing that explains why maintenance matters.,PATIENT_EXPERIENCE_ADHERENCE,S27-V0,S27
+ARC-00481,We reviewed the AURORA-1 primary endpoint slides.,SUMMARY_NO_INSIGHT,NOISE-07,NOISE-07
+ARC-00376,We reviewed the AURORA-1 primary endpoint slides.,SUMMARY_NO_INSIGHT,NOISE-07,NOISE-07
+ARC-00263,Wanted to know whether an assay exists and whether levels correlate with,DATA_GAP_EVIDENCE_NEED,S18-V1,S18
+ARC-00380,Next steps: schedule a follow up in Q3.,LOGISTICS,NOISE-12,NOISE-12
+ARC-00340,Said he is waiting for teh guideline refresh before changing sequencing. Expects it after,GUIDELINES_PRACTICE_PATTERNS,S25-V0,S25
+ARC-00474,Rescheduled from last Tuesday due to his clinic overrunning.,LOGISTICS,NOISE-01,NOISE-01
+ARC-00470,He is travelling to the congress and offered to meet there.,SUMMARY_NO_INSIGHT,NOISE-05,NOISE-05
+ARC-00438,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00162,Suggested EIM patients as the natural population and was frustrated there is no published subgroup.,PATIENT_SELECTION_POSITIONING,S10-V2,S10
+ARC-00462,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00098,"Raised that saw ALT rise to about 2x upper limit in two induction patients. Both normalised by week 12 without stopping, but he ordered a full hepatology work-up on the first one.",SAFETY_TOLERABILITY,S06b-V0,S06b
+ARC-00262,Wanted to know whether an assay exists adn whether levels,DATA_GAP_EVIDENCE_NEED,S18-V1,S18
+ARC-00500,He is travelling to the congress and offered to meet there.,SUMMARY_NO_INSIGHT,NOISE-05,NOISE-05
+ARC-00308,Said calprotectin is his de facto endpoint and asked whether it tracks with response in the AURORA data.,DIAGNOSTIC_MONITORING,S22-V1,S22
+ARC-00246,Asked whether AURORA-2 captured histologic remission. Said that is the endpoint his academic colleagues now,DATA_GAP_EVIDENCE_NEED,S17-V0,S17
+ARC-00404,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00503,Shared the published induction manuscript reprint.,SUMMARY_NO_INSIGHT,NOISE-09,NOISE-09
+ARC-00085,asked how the infection signal compares w/ RIMVEXA. Said his pts read about JAK warnings and assume all advanced,SAFETY_TOLERABILITY,S06-V0,S06
+ARC-00045,Made the point that his practice is almost all bio-experienced and the AURORA population was not.,EFFICACY_REAL_WORLD,S03-V1,S03
+ARC-00440,Rescheduled from last Tuesday due to his clinic overrunning.,LOGISTICS,NOISE-01,NOISE-01
+ARC-00040,Flagged that the mtx dataset ends exactly where his clinical q begins.,EFFICACY_REAL_WORLD,S02-V4,S02
+ARC-00313,Asked whether TL1A expression predicts response and whether there is a companion assay in development.,DIAGNOSTIC_MONITORING,S23-V0,S23
+ARC-00051,Said the drug works beautifully in pts who have failed nothing and much less well in the ones he actually needs help w/.,EFFICACY_REAL_WORLD,S03-V2,S03
+ARC-00442,Shared the published induction manuscript reprint.,SUMMARY_NO_INSIGHT,NOISE-09,NOISE-09
+ARC-00464,Discussed the standard response document on infusion reactions.,SUMMARY_NO_INSIGHT,NOISE-10,NOISE-10
+ARC-00150,In their algorithm it is a late option. was open to moving it earlier if there were head to head,PATIENT_SELECTION_POSITIONING,S09-V3,S09
+ARC-00210,Raised that the community group next door will not stock it - the acquisition cost versus reimbursement does not work for them.,ACCESS_REIMBURSEMENT,S14-V0,S14
+ARC-00165,Says patients want a pill. RIMVEXA wins that conversation before efficacy is even,COMPETITIVE_LANDSCAPE,S11-V0,S11
+ARC-00441,Rescheduled from last Tuesday due to his clinic overrunning.,LOGISTICS,NOISE-01,NOISE-01
+ARC-00293,Asked for a simple one page list of open studies he can hand to referring physicians.,CLINICAL_TRIAL_EXPERIENCE,S21-V0,S21
+ARC-00026,"Asked repeatedly about two year durability. His view is that the decision point for UC biologics is month 18, not month 12.",EFFICACY_REAL_WORLD,S02-V1,S02
+ARC-00238,Pouch patients are invisible in all the programmes. He treats them off label with,UNMET_NEED,S16-V1,S16
+ARC-00297,Said his referral network has no idea what is enrolling. Referrals dried up after the last study closed.,CLINICAL_TRIAL_EXPERIENCE,S21-V1,S21
+ARC-00121,Said if there were a fully subcutaneous induction he would use the drug in twice,DOSING_ADMINISTRATION,S07-V3,S07
+ARC-00450,Rescheduled from last Tuesday due to his clinic overrunning.,LOGISTICS,NOISE-01,NOISE-01
+ARC-00197,His nurse spends about 90 minutes per new start on the authorisation paperwork. Two denials so far this,ACCESS_REIMBURSEMENT,S13-V1,S13
+ARC-00181,Asked directly how it differs from ZOLVANTIS in practice. Said without a head to head he treats,COMPETITIVE_LANDSCAPE,S12-V0,S12
+ARC-00161,Suggested EIM patients as teh natural population and was frustrated there is,PATIENT_SELECTION_POSITIONING,S10-V2,S10
+ARC-00156,Thinks the mechanism should help the joint symptoms too. Asked if there is any EIM subgroup,PATIENT_SELECTION_POSITIONING,S10-V0,S10
+ARC-00190,Wants a comparative trial. Said network meta-analyses do not move him.,COMPETITIVE_LANDSCAPE,S12-V2,S12
+ARC-00490,Next steps: schedule a follow up in Q3.,LOGISTICS,NOISE-12,NOISE-12
+ARC-00095,Raised comparative safety - specifically herpes zoster - and whether prophylaxis or vaccination timing differs.,SAFETY_TOLERABILITY,S06-V2,S06
+ARC-00039,Flagged that the maintenance dataset ends exactly where his clinical question begins.,EFFICACY_REAL_WORLD,S02-V4,S02
+ARC-00271,asked about ADA rates and whether he should be co-prescribing an immunomodulator as he would w/ infliximab.,DATA_GAP_EVIDENCE_NEED,S19-V0,S19
+ARC-00001,"He said his first four patients took closer to 8 weeks before they saw meaningful symptom improvement, which surprised him given how the AURORA-1 curves look.",EFFICACY_REAL_WORLD,S01-V0,S01
+ARC-00386,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00114,Complained that the IV induction means competing with oncology for infusion slots. That alone pushes him toward an oral first.,DOSING_ADMINISTRATION,S07-V1,S07
+ARC-00224,His real problem is the hospitalised steroid refractory patient. Nothing in the class has data there.,UNMET_NEED,S15-V0,S15
+ARC-00281,Said the HORIZON-CD scope schedule is the reason he has enrolled one patient. Four scopes in a year is a hard sell.,CLINICAL_TRIAL_EXPERIENCE,S20-V0,S20
+ARC-00381,We reviewed the AURORA-1 primary endpoint slides.,SUMMARY_NO_INSIGHT,NOISE-07,NOISE-07
+ARC-00267,Said w/o TDM he cannot tell mechanical failure from immunogenicity when someone loses resp.,DATA_GAP_EVIDENCE_NEED,S18-V2,S18
+ARC-00231,Wants to know if anyone is even thinking about an inpatient rescue,UNMET_NEED,S15-V2,S15
+ARC-00397,"Walked through the mechanism of action deck, no questions.",SUMMARY_NO_INSIGHT,NOISE-08,NOISE-08
+ARC-00432,Shared the published induction manuscript reprint.,SUMMARY_NO_INSIGHT,NOISE-09,NOISE-09
+ARC-00015,Noted a lag between starting induction and any real clinical change; said he now counsels pts to expect two,EFFICACY_REAL_WORLD,S01-V3,S01
+ARC-00097,"Commented that saw ALT rise to about 2x upper limit in two induction patients. Both normalised by week 12 without stopping, but he ordered a full hepatology work-up on the first one.",SAFETY_TOLERABILITY,S06b-V0,S06b
+ARC-00164,Suggested EIM patients as the natural population and was frustrated there is,PATIENT_SELECTION_POSITIONING,S10-V2,S10
+ARC-00368,Asked whether there is a patient support programme with reminders. Did not know one existed.,PATIENT_EXPERIENCE_ADHERENCE,S27-V2,S27
+ARC-00159,His two best responders both had significant arthralgia that also improved. Wants to know if that is real or coincidence.,PATIENT_SELECTION_POSITIONING,S10-V1,S10
+ARC-00484,He was 20 minutes late; we had about 25 minutes in total.,LOGISTICS,NOISE-02,NOISE-02
+ARC-00501,"Confirmed his assistant is Marta, best route in for future scheduling.",LOGISTICS,NOISE-03,NOISE-03
+ARC-00145,Said the drug sits behind two other agents in their pathway and nobody has revisited that pathway since,PATIENT_SELECTION_POSITIONING,S09-V2,S09
+ARC-00466,"Confirmed his assistant is Marta, best route in for future scheduling.",LOGISTICS,NOISE-03,NOISE-03
+ARC-00166,Says patients want a pill. RIMVEXA wins that conversation before efficacy is even,COMPETITIVE_LANDSCAPE,S11-V0,S11
+ARC-00059,"Two patients lost response at about month 10. Asked what the options are - escalate, shorten interval, or switch.",EFFICACY_REAL_WORLD,S04-V0,S04
+ARC-00282,Said the HORIZON-CD scope schedule is the reason he has enrolled one patient. Four scopes in a year is a hard sell.,CLINICAL_TRIAL_EXPERIENCE,S20-V0,S20
+ARC-00253,Said endoscopic improvement is table stakes now and histologic remission is the differentiator.,DATA_GAP_EVIDENCE_NEED,S17-V2,S17
+ARC-00504,"Reminded him about the advisory board invitation, he will check dates.",LOGISTICS,NOISE-06,NOISE-06
+ARC-00060,"Two patients lost response at about month 10. Asked what the options are - escalate, shorten interval, or switch.",EFFICACY_REAL_WORLD,S04-V0,S04
+ARC-00439,Discussed the standard response document on infusion reactions.,SUMMARY_NO_INSIGHT,NOISE-10,NOISE-10
+ARC-00264,Wanted to know whetehr an assay exists and whether levels correlate with response.,DATA_GAP_EVIDENCE_NEED,S18-V1,S18
+ARC-00135,Raised that requested information on management around pregnancy planning; he has two patients of childbearing age,DOSING_ADMINISTRATION,S08-V2,S08
+ARC-00473,"Coffee was terrible, as usual.",LOGISTICS,NOISE-00,NOISE-00
+ARC-00170,For a newly diagnosed 28 year old he reaches for the oral agent because it works fast and needs no infusion visit.,COMPETITIVE_LANDSCAPE,S11-V1,S11
+ARC-00403,Follow up: send him the reprint and the trial site list.,LOGISTICS,NOISE-11,NOISE-11
+ARC-00436,We reviewed the AURORA-1 primary endpoint slides.,SUMMARY_NO_INSIGHT,NOISE-07,NOISE-07
+ARC-00274,Immunogenicity question again - is combination therapy needed or is monotherapy sufficient?,DATA_GAP_EVIDENCE_NEED,S19-V1,S19
+ARC-00062,Brought up secondary LOR. Said it feels like the same pattern he sees with anti-TNFs at the one year,EFFICACY_REAL_WORLD,S04-V1,S04
+ARC-00407,He was 20 minutes late; we had about 25 minutes in total.,LOGISTICS,NOISE-02,NOISE-02
+ARC-00370,Rescheduled from last Tuesday due to his clinic overrunning.,LOGISTICS,NOISE-01,NOISE-01
+ARC-00377,"Confirmed his assistant is Marta, best route in for future scheduling.",LOGISTICS,NOISE-03,NOISE-03
+ARC-00492,He asked to be removed from the newsletter distribution.,LOGISTICS,NOISE-13,NOISE-13
+ARC-00425,He is travelling to the congress and offered to meet there.,SUMMARY_NO_INSIGHT,NOISE-05,NOISE-05
+ARC-00030,Says he cannot position it as a long term agent until he sees OLE data past 100 weeks.,EFFICACY_REAL_WORLD,S02-V2,S02
+ARC-00191,Wants a comparative trial. Said network meta-analyses do not move him.,COMPETITIVE_LANDSCAPE,S12-V2,S12
+ARC-00476,Follow up: send him the reprint and the trial site list.,LOGISTICS,NOISE-11,NOISE-11
+ARC-00422,He was 20 minutes late; we had about 25 minutes in total.,LOGISTICS,NOISE-02,NOISE-02
+ARC-00158,His two best responders both had significant arthralgia that also improved. Wants to know if that is real or coincidence.,PATIENT_SELECTION_POSITIONING,S10-V1,S10
+ARC-00378,Rescheduled from last Tuesday due to his clinic overrunning.,LOGISTICS,NOISE-01,NOISE-01
+ARC-00194,He said that pA requires two prior advanced therapy failures at both his major payers. That is why it is,ACCESS_REIMBURSEMENT,S13-V0,S13
+ARC-00391,"Confirmed his assistant is Marta, best route in for future scheduling.",LOGISTICS,NOISE-03,NOISE-03
+ARC-00180,Observed that acknowledged teh JAK safety concerns but said speed of response and route still win for most of,COMPETITIVE_LANDSCAPE,S11-V3,S11
+ARC-00148,Said the drug sits behind two other agents in their pathway and nobody has revisited that pathway since it was written.,PATIENT_SELECTION_POSITIONING,S09-V2,S09
+ARC-00025,"Asked repeatedly about two year durability. His view is that the decision point for UC biologics is month 18, not month 12.",EFFICACY_REAL_WORLD,S02-V1,S02
+ARC-00343,Guidelines drive his group. Nothing moves until the society statement moves.,GUIDELINES_PRACTICE_PATTERNS,S25-V1,S25
+ARC-00287,Enrolment is stalled because of the endoscopy burden. His scheduling team cannot absorb,CLINICAL_TRIAL_EXPERIENCE,S20-V1,S20
+ARC-00364,Said his no-show rate for mtx is climbing among pts in remission.,PATIENT_EXPERIENCE_ADHERENCE,S27-V1,S27
+ARC-00389,"Coffee was terrible, as usual.",LOGISTICS,NOISE-00,NOISE-00
+ARC-00366,Asked whether there is a patient support programme with reminders. Did not know one existed.,PATIENT_EXPERIENCE_ADHERENCE,S27-V2,S27
+ARC-00008,Feels the onset is slower than advertised - his impression is 6 to 8 weeks in practice vs the week 4 numbers he remembers from the,EFFICACY_REAL_WORLD,S01-V1,S01
+ARC-00080,One of his pts described the injection as stinging badly for a couple of minutes; she has developed a firm red area at the site,SAFETY_TOLERABILITY,S05-V2,S05
+ARC-00311,Their pathway is calpro-driven. Wanted the correlation between calprotectin and endoscopic outcome in the trials.,DIAGNOSTIC_MONITORING,S22-V2,S22
+ARC-00350,Device feedback - his pts w/ arthritis struggle w/ the activation force. asked if a different presentation is planned.,PATIENT_EXPERIENCE_ADHERENCE,S26-V1,S26
+ARC-00405,Follow up: send him the reprint and the trial site list.,LOGISTICS,NOISE-11,NOISE-11
+ARC-00034,"Durability came up again - he wants week 104 numbers, ideally with endoscopic outcomes not just clinical remission.",EFFICACY_REAL_WORLD,S02-V3,S02
+ARC-00348,Two elderly pts cannot depress the autoinjector plunger. One gave up adn the daughter now does it.,PATIENT_EXPERIENCE_ADHERENCE,S26-V0,S26
+ARC-00149,In their algorithm it is a late option. He was open to moving it earlier if there were head to head data.,PATIENT_SELECTION_POSITIONING,S09-V3,S09
+ARC-00124,Said if there were a fully subcutaneous induction he would use the drug in twice as many patients.,DOSING_ADMINISTRATION,S07-V3,S07
+ARC-00118,Their unit runs at capacity; adding a three-infusion induction for each new UC start is not sustainable.,DOSING_ADMINISTRATION,S07-V2,S07
+ARC-00155,Thinks the mechanism should help the joint symptoms too. Asked if there is any EIM subgroup analysis.,PATIENT_SELECTION_POSITIONING,S10-V0,S10
+ARC-00240,Pouch patients are invisible in all the programmes. He treats them off label with whatever he,UNMET_NEED,S16-V1,S16
+ARC-00443,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00042,"In his hands the multiply-refractory patients are not responding. Bio-naive patients do well, third line and beyond much less so.",EFFICACY_REAL_WORLD,S03-V0,S03
+ARC-00495,He asked to be removed from the newsletter distribution.,LOGISTICS,NOISE-13,NOISE-13
+ARC-00172,For a newly diagnosed 28 year old he reaches for the oral agent because it works fast and needs no infusion visit.,COMPETITIVE_LANDSCAPE,S11-V1,S11
+ARC-00288,Enrolment is stalled because of the endoscopy burden. His scheduling team cannot,CLINICAL_TRIAL_EXPERIENCE,S20-V1,S20
+ARC-00494,Follow up: send him the reprint and the trial site list.,LOGISTICS,NOISE-11,NOISE-11
+ARC-00023,Wanted to know what happens after year one. Said the 52 week data is fine but every biologic looks good at 52 weeks.,EFFICACY_REAL_WORLD,S02-V0,S02
+ARC-00142,Positioning is post anti-TNF and post JAK in his practice. Admitted this is inertia as,PATIENT_SELECTION_POSITIONING,S09-V1,S09
+ARC-00306,Said calprotectin is his de facto endpoint and asked whether it tracks with response in the AURORA data.,DIAGNOSTIC_MONITORING,S22-V1,S22
+ARC-00049,Said the drug works beautifully in patients who have failed nothing and much less well in the ones he actually needs help with.,EFFICACY_REAL_WORLD,S03-V2,S03
+ARC-00469,"Reminded him about the advisory board invitation, he will check dates.",LOGISTICS,NOISE-06,NOISE-06
+ARC-00223,His real problem is the hospitalised steroid refractory pt. Nothing in the class has data there.,UNMET_NEED,S15-V0,S15
+ARC-00187,Considers TL1A and IL-23 the same tier. Mechanism story is interesting but not decision-changing for him.,COMPETITIVE_LANDSCAPE,S12-V1,S12
+ARC-00342,Guidelines drive his group. Nothing moves until the society statement moves.,GUIDELINES_PRACTICE_PATTERNS,S25-V1,S25
+ARC-00411,"Walked through the mechanism of action deck, no questions.",SUMMARY_NO_INSIGHT,NOISE-08,NOISE-08
+ARC-00369,"Coffee was terrible, as usual.",LOGISTICS,NOISE-00,NOISE-00
+ARC-00094,Raised comparative safety - specifically herpes zoster - and whether prophylaxis or vaccination timing differs.,SAFETY_TOLERABILITY,S06-V2,S06
+ARC-00427,Rescheduled from last Tuesday due to his clinic overrunning.,LOGISTICS,NOISE-01,NOISE-01
+ARC-00251,Histology is where the field is going. He wants to see Geboes or Nancy,DATA_GAP_EVIDENCE_NEED,S17-V1,S17
+ARC-00249,Histology is where the field is going. He wants to see Geboes or Nancy index data.,DATA_GAP_EVIDENCE_NEED,S17-V1,S17
+ARC-00365,Asked whether there is a patient support programme with reminders. Did not know one existed.,PATIENT_EXPERIENCE_ADHERENCE,S27-V2,S27
+ARC-00310,Their pathway is calpro-driven. Wanted the correlation between calprotectin and endoscopic outcome in the trials.,DIAGNOSTIC_MONITORING,S22-V2,S22
+ARC-00208,Payer policy at the regional plan mandates prior anti-TNF and prior JAK failure before approval.,ACCESS_REIMBURSEMENT,S13-V3,S13
+ARC-00382,Discussed the standard response document on infusion reactions.,SUMMARY_NO_INSIGHT,NOISE-10,NOISE-10
+ARC-00301,He monitors with calprotectin every 12 weeks and scopes only if it rises. Endoscopy is a last resort now.,DIAGNOSTIC_MONITORING,S22-V0,S22
+ARC-00006,Feels the onset is slower than advertised - his impression is 6 to 8 weeks in practice vs the week 4 numbers he remembers from the,EFFICACY_REAL_WORLD,S01-V1,S01
+ARC-00424,"Walked through the mechanism of action deck, no questions.",SUMMARY_NO_INSIGHT,NOISE-08,NOISE-08
+ARC-00353,Said the pen is stiff. A patient reported the cap was extremely hard to remove and she cracked it trying.,PATIENT_EXPERIENCE_ADHERENCE,S26-V2,S26
+ARC-00482,He was 20 minutes late; we had about 25 minutes in total.,LOGISTICS,NOISE-02,NOISE-02
+ARC-00081,Says the injection site reactions are the single biggest tolerability complaint he hears at follow-up,SAFETY_TOLERABILITY,S05-V3,S05
+ARC-00305,Said calprotectin is his de facto endpoint and asked whether it tracks w/ resp in the AURORA,DIAGNOSTIC_MONITORING,S22-V1,S22
+ARC-00372,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00189,Wants a comparative trial. Said network meta-analyses do not move him.,COMPETITIVE_LANDSCAPE,S12-V2,S12
+ARC-00186,Considers TL1A and IL-23 the same tier. Mechanism story is interesting but not decision-changing for him.,COMPETITIVE_LANDSCAPE,S12-V1,S12
+ARC-00167,Says patients want a pill. RIMVEXA wins that conversation before efficacy is even,COMPETITIVE_LANDSCAPE,S11-V0,S11
+ARC-00418,Discussed the standard response document on infusion reactions.,SUMMARY_NO_INSIGHT,NOISE-10,NOISE-10
+ARC-00316,Asked whether TL1A expression predicts response and whether there is a companion assay in development.,DIAGNOSTIC_MONITORING,S23-V0,S23
+ARC-00260,Asked if there is a target trough. He does TDM routinely for anti-TNFs and wants to do the same here.,DATA_GAP_EVIDENCE_NEED,S18-V0,S18
+ARC-00410,"Coffee was terrible, as usual.",LOGISTICS,NOISE-00,NOISE-00
+ARC-00160,His two best responders both had significant arthralgia that also improved. Wants to know if that is real or coincidence.,PATIENT_SELECTION_POSITIONING,S10-V1,S10
+ARC-00239,Pouch patients are invisible in all the programmes. He treats them off label with whatever he has.,UNMET_NEED,S16-V1,S16
+ARC-00478,Shared the published induction manuscript reprint.,SUMMARY_NO_INSIGHT,NOISE-09,NOISE-09
+ARC-00456,We reviewed the AURORA-1 primary endpoint slides.,SUMMARY_NO_INSIGHT,NOISE-07,NOISE-07
+ARC-00010,Main comment was about speed of response. Said patients and referring docs get anxious around week 5 when nothing has changed,EFFICACY_REAL_WORLD,S01-V2,S01
+ARC-00344,Guidelines drive his group. Nothing moves until the society statement moves.,GUIDELINES_PRACTICE_PATTERNS,S25-V1,S25
+ARC-00216,Said his private practice colleagues send pts to the hospital for induction b/c the buy and bill margin is negative.,ACCESS_REIMBURSEMENT,S14-V1,S14
+ARC-00497,Discussed the standard response document on infusion reactions.,SUMMARY_NO_INSIGHT,NOISE-10,NOISE-10
+ARC-00018,Raised that the trial response curves set an expectation of fast improvement that his own patients have,EFFICACY_REAL_WORLD,S01-V4,S01
+ARC-00486,Rescheduled from last Tuesday due to his clinic overrunning.,LOGISTICS,NOISE-01,NOISE-01
+ARC-00229,Wants to know if anyone is even thinking about an inpatient rescue study.,UNMET_NEED,S15-V2,S15
+ARC-00318,Said a biomarker would change everything - he would move it first line for a,DIAGNOSTIC_MONITORING,S23-V1,S23
+ARC-00103,Mentioned mild LFT bumps during induction. Not clinically significant in his view but it generates phone calls and,SAFETY_TOLERABILITY,S06b-V1,S06b
+ARC-00330,"Said the pathway is the gatekeeper, not the individual physician. cannot deviate w/o",GUIDELINES_PRACTICE_PATTERNS,S24-V1,S24
+ARC-00196,Said that pA requires two prior advanced therapy failures at both his major payers. That is why it is third line.,ACCESS_REIMBURSEMENT,S13-V0,S13
+ARC-00395,Next steps: schedule a follow up in Q3.,LOGISTICS,NOISE-12,NOISE-12
+ARC-00434,He asked to be removed from the newsletter distribution.,LOGISTICS,NOISE-13,NOISE-13
+ARC-00449,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00452,Next steps: schedule a follow up in Q3.,LOGISTICS,NOISE-12,NOISE-12
+ARC-00233,Asked about pouchitis. Said he has a dozen patients with chronic pouchitis and zero evidence for any,UNMET_NEED,S16-V0,S16
+ARC-00488,Shared the published induction manuscript reprint.,SUMMARY_NO_INSIGHT,NOISE-09,NOISE-09
+ARC-00110,Infusion capacity is his rate limiter. Says he can get approval in ten days and then wait a month,DOSING_ADMINISTRATION,S07-V0,S07
+ARC-00467,We reviewed the AURORA-1 primary endpoint slides.,SUMMARY_NO_INSIGHT,NOISE-07,NOISE-07
+ARC-00179,Raised that acknowledged the JAK safety concerns but said speed of resp and route still win for most of his new starts.,COMPETITIVE_LANDSCAPE,S11-V3,S11
+ARC-00140,"He uses it third line. When pushed on why, he said mostly because that is where the payer puts it, not because of the data.",PATIENT_SELECTION_POSITIONING,S09-V0,S09
+ARC-00112,Infusion capacity is his rate limiter. Says he can get approval in ten days and then wait a month for a chair.,DOSING_ADMINISTRATION,S07-V0,S07
+ARC-00004,"He said his first four patients took closer to 8 weeks before they saw meaningful symptom improvement, which surprised him given how the AURORA-1 curves look.",EFFICACY_REAL_WORLD,S01-V0,S01
+ARC-00235,asked about pouchitis. Said he has a dozen pts w/ chronic pouchitis and zero evidence for any of them.,UNMET_NEED,S16-V0,S16
+ARC-00132,Wanted written guidance on holding doses around elective colectomy and when,DOSING_ADMINISTRATION,S08-V1,S08
+ARC-00091,Wanted a plain answer on serious infection rates versus the oral agents. Felt the label alone does not let him have that conversation.,SAFETY_TOLERABILITY,S06-V1,S06
+ARC-00259,asked if there is a target trough. does TDM routinely for anti-TNFs and wants to do the same,DATA_GAP_EVIDENCE_NEED,S18-V0,S18
+ARC-00105,Asked whether transient transaminitis in the first eight weeks is expected and whether he should be monitoring more or less often.,SAFETY_TOLERABILITY,S06b-V2,S06b
+ARC-00423,"Walked through the mechanism of action deck, no questions.",SUMMARY_NO_INSIGHT,NOISE-08,NOISE-08
+ARC-00406,"Confirmed his assistant is Marta, best route in for future scheduling.",LOGISTICS,NOISE-03,NOISE-03
+ARC-00507,Rescheduled from last Tuesday due to his clinic overrunning.,LOGISTICS,NOISE-01,NOISE-01
+ARC-00093,Raised comparative safety - specifically herpes zoster - and whether prophylaxis or vaccination timing differs.,SAFETY_TOLERABILITY,S06-V2,S06
+ARC-00127,asked what to do when a pt misses two mtx doses - restart induction or resume q4w? Said the label is silent.,DOSING_ADMINISTRATION,S08-V0,S08
+ARC-00272,Asked about ADA rates and whether he should be co-prescribing an immunomodulator as he would with infliximab.,DATA_GAP_EVIDENCE_NEED,S19-V0,S19
+ARC-00336,Institutional protocol has not been revised since before approval so it is not in there at all.,GUIDELINES_PRACTICE_PATTERNS,S24-V2,S24
+ARC-00273,Immunogenicity question again - is combination therapy needed or is monotherapy sufficient?,DATA_GAP_EVIDENCE_NEED,S19-V1,S19
+ARC-00285,Enrolment is stalled because of the endoscopy burden. His scheduling team,CLINICAL_TRIAL_EXPERIENCE,S20-V1,S20
+ARC-00232,Wants to know if anyone is even thinking about an inpatient,UNMET_NEED,S15-V2,S15
+ARC-00300,Said his referral network has no idea what is enrolling. Referrals dried up after the last study,CLINICAL_TRIAL_EXPERIENCE,S21-V1,S21
+ARC-00082,Says the injection site reactions are the single biggest tolerability complaint he hears at follow-up visits.,SAFETY_TOLERABILITY,S05-V3,S05
+ARC-00477,Follow up: send him the reprint and the trial site list.,LOGISTICS,NOISE-11,NOISE-11
+ARC-00096,Raised comparative safety - specifically herpes zoster - and whether prophylaxis or vaccination timing differs.,SAFETY_TOLERABILITY,S06-V2,S06
+ARC-00017,Raised that the trial response curves set an expectation of fast improvement that his own patients have not matched.,EFFICACY_REAL_WORLD,S01-V4,S01
+ARC-00447,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00314,asked whether TL1A expression predicts resp and whether there is a companion assay,DIAGNOSTIC_MONITORING,S23-V0,S23
+ARC-00498,"Reminded him about the advisory board invitation, he will check dates.",LOGISTICS,NOISE-06,NOISE-06
+ARC-00147,Said the drug sits behind two other agents in their pathway and nobody has revisited that pathway since it was written.,PATIENT_SELECTION_POSITIONING,S09-V2,S09
+ARC-00037,Flagged that the mtx dataset ends exactly where his clinical q begins.,EFFICACY_REAL_WORLD,S02-V4,S02
+ARC-00458,Discussed the standard response document on infusion reactions.,SUMMARY_NO_INSIGHT,NOISE-10,NOISE-10
+ARC-00258,Asked if there is a target trough. He does TDM routinely for anti-TNFs and wants to do the same here.,DATA_GAP_EVIDENCE_NEED,S18-V0,S18
+ARC-00032,Says he cannot position it as a long term agent until he sees OLE data past 100 weeks.,EFFICACY_REAL_WORLD,S02-V2,S02
+ARC-00257,Asked if there is a target trough. He does TDM routinely for anti-TNFs and wants to do the same here.,DATA_GAP_EVIDENCE_NEED,S18-V0,S18
+ARC-00460,"Walked through the mechanism of action deck, no questions.",SUMMARY_NO_INSIGHT,NOISE-08,NOISE-08
+ARC-00151,In their algorithm it is a late option. He was open to moving it earlier if there were head to head data.,PATIENT_SELECTION_POSITIONING,S09-V3,S09
+ARC-00315,Asked whether TL1A expression predicts response and whether there is a companion,DIAGNOSTIC_MONITORING,S23-V0,S23
+ARC-00221,His real problem is the hospitalised steroid refractory patient. Nothing in the class has data there.,UNMET_NEED,S15-V0,S15
+ARC-00139,"He uses it third line. When pushed on why, he said mostly because that is where the payer puts it, not because of the data.",PATIENT_SELECTION_POSITIONING,S09-V0,S09
+ARC-00002,"He said his first four patients took closer to 8 weeks before they saw meaningful symptom improvement, which surprised him given how the AURORA-1 curves look.",EFFICACY_REAL_WORLD,S01-V0,S01
+ARC-00502,Follow up: send him the reprint and the trial site list.,LOGISTICS,NOISE-11,NOISE-11
+ARC-00236,Asked about pouchitis. Said he has a dozen patients with chronic pouchitis and zero evidence for,UNMET_NEED,S16-V0,S16
+ARC-00286,Enrolment is stalled because of the endoscopy burden. His scheduling team cannot,CLINICAL_TRIAL_EXPERIENCE,S20-V1,S20
+ARC-00294,Asked for a simple one page list of open studies he can hand to,CLINICAL_TRIAL_EXPERIENCE,S21-V0,S21
+ARC-00073,ISRs came up unprompted. He said the label rate does not match what he is seeing and it is affecting adherence.,SAFETY_TOLERABILITY,S05-V1,S05
+ARC-00324,Very interested in the predictive biomarker work presented at ECCO. Wants to know if it is,DIAGNOSTIC_MONITORING,S23-V2,S23
+ARC-00421,We reviewed the AURORA-1 primary endpoint slides.,SUMMARY_NO_INSIGHT,NOISE-07,NOISE-07
+ARC-00429,Discussed the standard response document on infusion reactions.,SUMMARY_NO_INSIGHT,NOISE-10,NOISE-10
+ARC-00168,Says patients want a pill. RIMVEXA wins that conversation before efficacy is even discussed.,COMPETITIVE_LANDSCAPE,S11-V0,S11
+ARC-00480,He was 20 minutes late; we had about 25 minutes in total.,LOGISTICS,NOISE-02,NOISE-02
+ARC-00173,Convenience is beating mechanism in his clinic. The oral option is simply easier for everyone.,COMPETITIVE_LANDSCAPE,S11-V2,S11
+ARC-00385,"Confirmed his assistant is Marta, best route in for future scheduling.",LOGISTICS,NOISE-03,NOISE-03
+ARC-00048,Made the point that his practice is almost all bio-experienced and the AURORA population was not.,EFFICACY_REAL_WORLD,S03-V1,S03
+ARC-00337,Said he is waiting for the guideline refresh before changing sequencing. Expects it after DDW.,GUIDELINES_PRACTICE_PATTERNS,S25-V0,S25
+ARC-00346,Two elderly patients cannot depress the autoinjector plunger. One gave up and the daughter now does it.,PATIENT_EXPERIENCE_ADHERENCE,S26-V0,S26
+ARC-00457,Next steps: schedule a follow up in Q3.,LOGISTICS,NOISE-12,NOISE-12
+ARC-00036,"Durability came up again - he wants wk 104 numbers, ideally w/ endoscopic outcomes not just clinical remission.",EFFICACY_REAL_WORLD,S02-V3,S02
+ARC-00195,He said that pA requires two prior advanced therapy failures at both his major payers. That is why it is third line.,ACCESS_REIMBURSEMENT,S13-V0,S13
+ARC-00058,"Two patients lost reponse at about month 10. Asked what the options are - escalate, shorten interval, or switch.",EFFICACY_REAL_WORLD,S04-V0,S04
+ARC-00141,Positioning is post anti-TNF and post JAK in his practice. Admitted this is inertia as,PATIENT_SELECTION_POSITIONING,S09-V1,S09
+ARC-00352,Device feedback - his pts w/ arthritis struggle w/ the activation force. asked if a different presentation is planned.,PATIENT_EXPERIENCE_ADHERENCE,S26-V1,S26
+ARC-00230,Wants to know if anyone is even thinking about an inpatient rescue study.,UNMET_NEED,S15-V2,S15
+ARC-00261,Wanted to know whether an assay exists and whether levels correlate with response.,DATA_GAP_EVIDENCE_NEED,S18-V1,S18
+ARC-00358,Adherence drops off once patients feel better. He wants something patient-facing that explains,PATIENT_EXPERIENCE_ADHERENCE,S27-V0,S27
+ARC-00334,Institutional protocol has not been revised since before approval so it is not in there at all.,GUIDELINES_PRACTICE_PATTERNS,S24-V2,S24
+ARC-00419,Shared the published induction manuscript reprint.,SUMMARY_NO_INSIGHT,NOISE-09,NOISE-09
+ARC-00044,"In his hands the multiply-refractory pts are not responding. Bio-naive pts do well, third line and beyond",EFFICACY_REAL_WORLD,S03-V0,S03
+ARC-00487,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00198,His nurse spends about 90 minutes per new start on the authorisation paperwork. Two denials so far this quarter.,ACCESS_REIMBURSEMENT,S13-V1,S13
+ARC-00265,Said without TDM he cannot tell mechanical failure from immunogenicity when someone loses,DATA_GAP_EVIDENCE_NEED,S18-V2,S18
+ARC-00137,"He uses it third line. When pushed on why, he said mostly because that is where the payer puts it, not because of the data.",PATIENT_SELECTION_POSITIONING,S09-V0,S09
+ARC-00182,Asked directly how it differs from ZOLVANTIS in practice. Said without a head to head he treats them as,COMPETITIVE_LANDSCAPE,S12-V0,S12
+ARC-00021,Wanted to know what happens after year one. Said the 52 week data is fine but every biologic looks good at,EFFICACY_REAL_WORLD,S02-V0,S02
+ARC-00278,Wants the ADA data broken out by whether patients were on a thiopurine.,DATA_GAP_EVIDENCE_NEED,S19-V2,S19
+ARC-00250,Histology is where the field is going. He wants to see Geboes or Nancy,DATA_GAP_EVIDENCE_NEED,S17-V1,S17
+ARC-00303,He monitors with calprotectin every 12 weeks and scopes only if it rises. Endoscopy is a last resort now.,DIAGNOSTIC_MONITORING,S22-V0,S22
+ARC-00154,Thinks the mechanism should help the joint symptoms too. Asked if there is any EIM subgroup,PATIENT_SELECTION_POSITIONING,S10-V0,S10
+ARC-00184,Asked directly how it differs from ZOLVANTIS in practice. Said without a head to head he treats tehm as,COMPETITIVE_LANDSCAPE,S12-V0,S12
+ARC-00373,We reviewed the AURORA-1 primary endpoint slides.,SUMMARY_NO_INSIGHT,NOISE-07,NOISE-07
+ARC-00011,Main comment was about speed of response. Said patinets and referring docs get anxious around week 5 when nothing has changed yet.,EFFICACY_REAL_WORLD,S01-V2,S01
+ARC-00302,He monitors with calprotectin every 12 weeks and scopes only if it rises. Endoscopy is a last resort now.,DIAGNOSTIC_MONITORING,S22-V0,S22
+ARC-00169,For a newly diagnosed 28 year old he reaches for the oral agent b/c it works fast and needs no infusion visit.,COMPETITIVE_LANDSCAPE,S11-V1,S11
+ARC-00268,Said without TDM he cannot tell mechanical failure from immunogenicity when someone,DATA_GAP_EVIDENCE_NEED,S18-V2,S18
+ARC-00178,She noted that acknowledged the JAK safety concerns but said speed of response and route still win for most of his new,COMPETITIVE_LANDSCAPE,S11-V3,S11
+ARC-00188,Considers TL1A and IL-23 the same tier. Mechanism story is interesting but not,COMPETITIVE_LANDSCAPE,S12-V1,S12
+ARC-00212,Observed that the community group next door will not stock it - the acquisition cost versus reimbursement does not work for them.,ACCESS_REIMBURSEMENT,S14-V0,S14
+ARC-00013,"Noted a lag between starting induction and any real clinical change; said he now counsels pts to expect two mo, not one.",EFFICACY_REAL_WORLD,S01-V3,S01
+ARC-00279,Wants the ADA data broken out by whether patients were on a thiopurine.,DATA_GAP_EVIDENCE_NEED,S19-V2,S19
+ARC-00054,"Observed a clear split: naive patients respond, patients post two anti-TNFs and a JAK largely do not.",EFFICACY_REAL_WORLD,S03-V3,S03
+ARC-00111,Infusion capacity is his rate limiter. Says he can get approval in ten days and then wait a month for a chair.,DOSING_ADMINISTRATION,S07-V0,S07
+ARC-00326,Their P&T committee reviews the IBD pathway once a year in November. Until then it is,GUIDELINES_PRACTICE_PATTERNS,S24-V0,S24
+ARC-00321,Very interested in the predictive biomarker work presented at ECCO. Wants to know if it is being taken forward.,DIAGNOSTIC_MONITORING,S23-V2,S23
+ARC-00005,Feels the onset is slower than advertised - his impression is 6 to 8 weeks in practice vs the week 4 numbers he remembers,EFFICACY_REAL_WORLD,S01-V1,S01
+ARC-00451,He is travelling to the congress and offered to meet there.,SUMMARY_NO_INSIGHT,NOISE-05,NOISE-05
+ARC-00433,Next steps: schedule a follow up in Q3.,LOGISTICS,NOISE-12,NOISE-12
+ARC-00203,Said the step edit is the whole story on positioning. Change the step edit and his,ACCESS_REIMBURSEMENT,S13-V2,S13
+ARC-00475,"Reminded him about the advisory board invitation, he will check dates.",LOGISTICS,NOISE-06,NOISE-06
+ARC-00123,Said if there were a fully subcutaneous induction he would use the drug in twice,DOSING_ADMINISTRATION,S07-V3,S07
+ARC-00070,Reported that three of his pts have had significant injection site reactions - redness and burning lasting several days. One is talking about stopping.,SAFETY_TOLERABILITY,S05-V0,S05
+ARC-00020,Raised that the trial response curves set an expectation of fast improvement that his own patients have not matched.,EFFICACY_REAL_WORLD,S01-V4,S01
+ARC-00387,He asked to be removed from the newsletter distribution.,LOGISTICS,NOISE-13,NOISE-13
+ARC-00090,Wanted a plain answer on serious infection rates versus teh oral agents. Felt the label alone does not let him have,SAFETY_TOLERABILITY,S06-V1,S06
+ARC-00086,Asked how the infection signal compares with RIMVEXA. Said his patients read about JAK warnings and assume all advanced therapies carry,SAFETY_TOLERABILITY,S06-V0,S06
+ARC-00134,Raised that requested information on management around pregnancy planning; he has two patinets of childbearing age asking.,DOSING_ADMINISTRATION,S08-V2,S08
+ARC-00296,Asked for a simple one page list of open studies he can hand,CLINICAL_TRIAL_EXPERIENCE,S21-V0,S21
+ARC-00053,"Observed a clear split: naive pts respond, pts post two anti-TNFs and a JAK largely",EFFICACY_REAL_WORLD,S03-V3,S03
+ARC-00242,Raised post-colectomy pts as a completely unserved group.,UNMET_NEED,S16-V2,S16
+ARC-00245,Asked whether AURORA-2 captured histologic remission. Said that is the endpoint his academic colleagues now,DATA_GAP_EVIDENCE_NEED,S17-V0,S17
+ARC-00174,Convenience is beating mechanism in his clinic. The oral option is simply easier for everyone.,COMPETITIVE_LANDSCAPE,S11-V2,S11
+ARC-00446,He is travelling to the congress and offered to meet there.,SUMMARY_NO_INSIGHT,NOISE-05,NOISE-05
+ARC-00035,"Durability came up again - he wants week 104 numbers, ideally with endoscopic outcomes not just",EFFICACY_REAL_WORLD,S02-V3,S02
+ARC-00399,"Walked through the mechanism of action deck, no questions.",SUMMARY_NO_INSIGHT,NOISE-08,NOISE-08
+ARC-00254,Said endoscopic improvement is table stakes now and histologic remission is,DATA_GAP_EVIDENCE_NEED,S17-V2,S17
+ARC-00043,"In his hands the multiply-refractory patients are not responding. Bio-naive patients do well, third line and beyond",EFFICACY_REAL_WORLD,S03-V0,S03
+ARC-00363,Said his no-show rate for maintenance is climbing among patients in remission.,PATIENT_EXPERIENCE_ADHERENCE,S27-V1,S27
+ARC-00347,Two elderly patients cannot depress the autoinjector plunger. One gave up and the daughter now does,PATIENT_EXPERIENCE_ADHERENCE,S26-V0,S26
+ARC-00115,Complained that the IV induction means competing with oncology for infusion slots. That alone pushes him toward an oral first.,DOSING_ADMINISTRATION,S07-V1,S07
+ARC-00041,"In his hands the multiply-refractory patients are not responding. Bio-naive patients do well, third line and beyond",EFFICACY_REAL_WORLD,S03-V0,S03
+ARC-00383,He was 20 minutes late; we had about 25 minutes in total.,LOGISTICS,NOISE-02,NOISE-02
+ARC-00247,Asked whether AURORA-2 captured histologic remission. Said that is the endpoint his academic colleagues now argue for.,DATA_GAP_EVIDENCE_NEED,S17-V0,S17
+ARC-00067,Wanted to know if anyone has tried q2w dosing after loss of resp and whether it recaptures anything.,EFFICACY_REAL_WORLD,S04-V2,S04
+ARC-00022,Wanted to know what happens after year one. Said the 52 week data is fine but every biologic looks good at 52 weeks.,EFFICACY_REAL_WORLD,S02-V0,S02
+ARC-00116,Complained that the IV induction means competing w/ oncology for infusion slots. That alone pushes him toward an oral first.,DOSING_ADMINISTRATION,S07-V1,S07
+ARC-00506,He was 20 minutes late; we had about 25 minutes in total.,LOGISTICS,NOISE-02,NOISE-02
+ARC-00077,One of his patients described the injection as stinging badly for a couple of minutes; she has developed a firm red area at the site each time.,SAFETY_TOLERABILITY,S05-V2,S05
+ARC-00029,Says he cannot position it as a long term agent until he sees OLE data past 100 weeks.,EFFICACY_REAL_WORLD,S02-V2,S02
+ARC-00280,Wants the ADA data broken out by whether patients were on,DATA_GAP_EVIDENCE_NEED,S19-V2,S19
+ARC-00448,"Coffee was terrible, as usual.",LOGISTICS,NOISE-00,NOISE-00
+ARC-00323,Very interested in the predictive biomarker work presented at ECCO. Wants to know if it is being taken forward.,DIAGNOSTIC_MONITORING,S23-V2,S23
+ARC-00445,"Coffee was terrible, as usual.",LOGISTICS,NOISE-00,NOISE-00
+ARC-00479,"Reminded him about the advisory board invitation, he will check dates.",LOGISTICS,NOISE-06,NOISE-06
+ARC-00027,"Asked repeatedly about two year durability. His view is that the decision point for UC biologics is month 18, not month",EFFICACY_REAL_WORLD,S02-V1,S02
+ARC-00472,He asked to be removed from the newsletter distribution.,LOGISTICS,NOISE-13,NOISE-13
+ARC-00226,"Said the unmet need is ASUC, not the outpatient with moderate disease.",UNMET_NEED,S15-V1,S15
+ARC-00225,"Said the unmet need is ASUC, not the outpatient with moderate disease.",UNMET_NEED,S15-V1,S15
+ARC-00379,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00072,Reported that three of his patients have had significant injection site reactions - redness and burning lasting several days. One is,SAFETY_TOLERABILITY,S05-V0,S05
+ARC-00289,Protocol burden came up - specifically the number of colonoscopies and the central reading,CLINICAL_TRIAL_EXPERIENCE,S20-V2,S20
+ARC-00415,Rescheduled from last Tuesday due to his clinic overrunning.,LOGISTICS,NOISE-01,NOISE-01
+ARC-00384,Next steps: schedule a follow up in Q3.,LOGISTICS,NOISE-12,NOISE-12
+ARC-00292,Protocol burden came up - specifically the number of colonoscopies and the,CLINICAL_TRIAL_EXPERIENCE,S20-V2,S20
+ARC-00508,He is travelling to the congress and offered to meet there.,SUMMARY_NO_INSIGHT,NOISE-05,NOISE-05
+ARC-00327,Their P&T committee reviews the IBD pathway once a year in November. Until then it is,GUIDELINES_PRACTICE_PATTERNS,S24-V0,S24
+ARC-00153,Thinks the mechanism should help the joint symptoms too. Asked if there is any EIM subgroup analysis.,PATIENT_SELECTION_POSITIONING,S10-V0,S10
+ARC-00109,Infusion capacity is his rate limiter. Says he can get approval in ten days and then wait a month for a chair.,DOSING_ADMINISTRATION,S07-V0,S07
+ARC-00130,Wanted written guidance on holding doses around elective colectomy and when to restart post-op.,DOSING_ADMINISTRATION,S08-V1,S08
+ARC-00328,Their P&T committee reviews the IBD pathway once a year in November. Until then it is exception requests only.,GUIDELINES_PRACTICE_PATTERNS,S24-V0,S24
+ARC-00215,Said his private practice colleagues send patients to the hospital for induction because the buy and bill margin is negative.,ACCESS_REIMBURSEMENT,S14-V1,S14
+ARC-00367,asked whether there is a pt support programme w/ reminders. Did not,PATIENT_EXPERIENCE_ADHERENCE,S27-V2,S27
+ARC-00028,"Asked repeatedly about two year durability. His view is that the decision point for UC biologics is month 18, not month",EFFICACY_REAL_WORLD,S02-V1,S02
+ARC-00200,His nurse spends about 90 minutes per new start on the authorisation paperwork. Two denials so far,ACCESS_REIMBURSEMENT,S13-V1,S13
+ARC-00003,"He said his first four patients took closer to 8 weeks before they saw meaningful symptom improvement, which surprised him given how the AURORA-1 curves",EFFICACY_REAL_WORLD,S01-V0,S01
+ARC-00228,"Said the unmet need is ASUC, not the outpatient with moderate disease.",UNMET_NEED,S15-V1,S15
+ARC-00012,Main comment was about speed of resp. Said pts and referring docs get anxious around wk 5 when nothing has changed yet.,EFFICACY_REAL_WORLD,S01-V2,S01
+ARC-00144,Positioning is post anti-TNF and post JAK in his practice. Admitted this is inertia as,PATIENT_SELECTION_POSITIONING,S09-V1,S09
+ARC-00351,Device feedback - his patients with arthritis struggle with the activation force. He asked if a different presentation is planned.,PATIENT_EXPERIENCE_ADHERENCE,S26-V1,S26
+ARC-00213,Said his private practice colleagues send patients to the hospital for induction because the buy and bill margin is negative.,ACCESS_REIMBURSEMENT,S14-V1,S14
+ARC-00128,Asked what to do when a patient misses two maintenance doses - restart induction or resume q4w? Said teh label is,DOSING_ADMINISTRATION,S08-V0,S08
+ARC-00325,Their P&T committee reviews the IBD pathway once a year in November. Until then it is exception requests only.,GUIDELINES_PRACTICE_PATTERNS,S24-V0,S24
+ARC-00269,Asked about ADA rates and whether he should be co-prescribing an immunomodulator as he would,DATA_GAP_EVIDENCE_NEED,S19-V0,S19
+ARC-00398,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00175,Convenience is beating mechanism in his clinic. The oral option is simply easier,COMPETITIVE_LANDSCAPE,S11-V2,S11
+ARC-00204,Said the step edit is the whole story on positioning. Change the step edit and his prescribing changes.,ACCESS_REIMBURSEMENT,S13-V2,S13
+ARC-00052,Said the drug works beautifully in patients who have failed nothing and much less well in the ones he actually,EFFICACY_REAL_WORLD,S03-V2,S03
+ARC-00056,"Observed a clear split: naive patients respond, patients post two anti-TNFs and a JAK",EFFICACY_REAL_WORLD,S03-V3,S03
+ARC-00394,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00290,Protocol burden came up - specifically the number of colonoscopies and the central reading turnaround.,CLINICAL_TRIAL_EXPERIENCE,S20-V2,S20
+ARC-00499,Discussed the standard response document on infusion reactions.,SUMMARY_NO_INSIGHT,NOISE-10,NOISE-10
+ARC-00131,Wanted written guidance on holding doses around elective colectomy and when to restart post-op.,DOSING_ADMINISTRATION,S08-V1,S08
+ARC-00459,We reviewed the AURORA-1 primary endpoint slides.,SUMMARY_NO_INSIGHT,NOISE-07,NOISE-07
+ARC-00505,Shared the published induction manuscript reprint.,SUMMARY_NO_INSIGHT,NOISE-09,NOISE-09
+ARC-00270,Asked about ADA rates and whether he should be co-prescribing an immunomodulator as he would with,DATA_GAP_EVIDENCE_NEED,S19-V0,S19
+ARC-00157,His two best responders both had significant arthralgia that also improved. Wants to know if that is,PATIENT_SELECTION_POSITIONING,S10-V1,S10
+ARC-00183,Asked directly how it differs from ZOLVANTIS in practice. Said without a head to head he treats them as interchangeable.,COMPETITIVE_LANDSCAPE,S12-V0,S12
+ARC-00152,In their algorithm it is a late option. He was open to moving it earlier if there were head to head data.,PATIENT_SELECTION_POSITIONING,S09-V3,S09
+ARC-00092,Wanted a plain answer on serious infection rates vs the oral agents. Felt the label alone does not let him,SAFETY_TOLERABILITY,S06-V1,S06
+ARC-00329,"Said the pathway is the gatekeeper, not the individual physician. He cannot deviate without a form.",GUIDELINES_PRACTICE_PATTERNS,S24-V1,S24
+ARC-00341,Guidelines drive his group. Nothing moves until the society statement moves.,GUIDELINES_PRACTICE_PATTERNS,S25-V1,S25
+ARC-00125,asked what to do when a pt misses two mtx doses - restart induction or resume q4w? Said the label is,DOSING_ADMINISTRATION,S08-V0,S08
+ARC-00177,Flagged that acknowledged the JAK safety concerns but said speed of response and route still win for most of his new starts.,COMPETITIVE_LANDSCAPE,S11-V3,S11
+ARC-00390,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00461,We reviewed the AURORA-1 primary endpoint slides.,SUMMARY_NO_INSIGHT,NOISE-07,NOISE-07
+ARC-00338,Said he is waiting for the guideline refresh before changing sequencing. Expects it after DDW.,GUIDELINES_PRACTICE_PATTERNS,S25-V0,S25
+ARC-00309,Their pathway is calpro-driven. Wanted the correlation between calprotectin and endoscopic outcome in the trials.,DIAGNOSTIC_MONITORING,S22-V2,S22
+ARC-00304,He monitors with calprotectin every 12 weeks and scopes only if it rises. Endoscopy is a last resort,DIAGNOSTIC_MONITORING,S22-V0,S22
+ARC-00014,"Noted a lag between starting induction and any real clinical change; said he now counsels patients to expect two months, not one.",EFFICACY_REAL_WORLD,S01-V3,S01
+ARC-00171,For a newly diagnosed 28 year old he reaches for the oral agent because it works fast and needs no infusion visit.,COMPETITIVE_LANDSCAPE,S11-V1,S11
+ARC-00126,Asked what to do when a patient misses two maintenance doses - restart induction or resume q4w? Said the label is silent.,DOSING_ADMINISTRATION,S08-V0,S08
+ARC-00084,Says the injection site reactions are the single biggest tolerability complaint he hears at follow-up visits.,SAFETY_TOLERABILITY,S05-V3,S05
+ARC-00402,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00075,ISRs came up unprompted. He said the label rate does not match what he is seeing and it,SAFETY_TOLERABILITY,S05-V1,S05
+ARC-00333,Institutional protocol has not been revised since before approval so it is not in there,GUIDELINES_PRACTICE_PATTERNS,S24-V2,S24
+ARC-00217,Raised the site of care issue. Community practices are opting out entirely.,ACCESS_REIMBURSEMENT,S14-V2,S14
+ARC-00019,Raised that teh trial response curves set an expectation of fast improvement that his own patients have not matched.,EFFICACY_REAL_WORLD,S01-V4,S01
+ARC-00493,Discussed the standard response document on infusion reactions.,SUMMARY_NO_INSIGHT,NOISE-10,NOISE-10
+ARC-00455,"Confirmed his assistant is Marta, best route in for future scheduling.",LOGISTICS,NOISE-03,NOISE-03
+ARC-00064,Brought up secondary LOR. Said it feels like the same pattern he sees with anti-TNFs at the,EFFICACY_REAL_WORLD,S04-V1,S04
+ARC-00138,"He uses it third line. When pushed on why, he said mostly because that is where the payer puts it, not because of the data.",PATIENT_SELECTION_POSITIONING,S09-V0,S09
+ARC-00104,Mentioned mild LFT bumps during induction. Not clinically significant in his view but it generates phone calls and repeat,SAFETY_TOLERABILITY,S06b-V1,S06b
+ARC-00299,Said his referral network has no idea what is enrolling. Referrals dried up after the last study closed.,CLINICAL_TRIAL_EXPERIENCE,S21-V1,S21
+ARC-00356,Said the pen is stiff. A pt reported the cap was extremely hard to remove and she cracked it trying.,PATIENT_EXPERIENCE_ADHERENCE,S26-V2,S26
+ARC-00102,Mentioned mild LFT bumps during induction. Not clinically significant in his view but it generates phone calls and repeat labs.,SAFETY_TOLERABILITY,S06b-V1,S06b
+ARC-00307,Said calprotectin is his de facto endpoint and asked whether it tracks with response in,DIAGNOSTIC_MONITORING,S22-V1,S22
+ARC-00416,"Confirmed his assistant is Marta, best route in for future scheduling.",LOGISTICS,NOISE-03,NOISE-03
+ARC-00214,Said his private practice colleagues send patients to the hospital for induction because the buy and bill margin is negative.,ACCESS_REIMBURSEMENT,S14-V1,S14
+ARC-00108,Asked whether transient transaminitis in the first eight weeks is expected and whether he should be monitoring more or less often.,SAFETY_TOLERABILITY,S06b-V2,S06b
+ARC-00007,Feels the onset is slower than advertised - his impression is 6 to 8 weeks in practice vs the week 4 numbers he remembers from the label.,EFFICACY_REAL_WORLD,S01-V1,S01
+ARC-00284,Said the HORIZON-CD scope schedule is the reason he has enrolled one patient. Four scopes in a year is,CLINICAL_TRIAL_EXPERIENCE,S20-V0,S20
+ARC-00283,Said the HORIZON-CD scope schedule is the reason he has enrolled one patient. Four scopes in a year is,CLINICAL_TRIAL_EXPERIENCE,S20-V0,S20
+ARC-00055,"Observed a clear split: naive patients respond, patients post two anti-TNFs and a JAK largely do not.",EFFICACY_REAL_WORLD,S03-V3,S03
+ARC-00275,Immunogenicity question again - is combination therapy needed or is monotherapy sufficient?,DATA_GAP_EVIDENCE_NEED,S19-V1,S19
+ARC-00222,His real problem is the hospitalised steroid refractory patient. Nothing in the class has data,UNMET_NEED,S15-V0,S15
+ARC-00050,Said the drug works beautifully in pts who have failed nothing and much less well in the ones he actually needs help w/.,EFFICACY_REAL_WORLD,S03-V2,S03
+ARC-00057,"Two patients lost response at about month 10. Asked what the options are - escalate, shorten interval, or",EFFICACY_REAL_WORLD,S04-V0,S04
+ARC-00163,Suggested EIM patients as the natural population and was frustrated there is,PATIENT_SELECTION_POSITIONING,S10-V2,S10
+ARC-00046,Made the point that his practice is almost all bio-experienced and the AURORA population was not.,EFFICACY_REAL_WORLD,S03-V1,S03
+ARC-00185,Considers TL1A and IL-23 the same tier. Mechanism story is interesting but not decision-changing for him.,COMPETITIVE_LANDSCAPE,S12-V1,S12
+ARC-00234,asked about pouchitis. Said he has a dozen pts w/ chronic pouchitis and zero evidence for any of them.,UNMET_NEED,S16-V0,S16
+ARC-00199,His nurse spends about 90 minutes per new start on the authorisation paperwork. Two denials so far this quarter.,ACCESS_REIMBURSEMENT,S13-V1,S13
+ARC-00076,ISRs came up unprompted. He said the label rate does not match what he is seeing and it is affecting adherence.,SAFETY_TOLERABILITY,S05-V1,S05
+ARC-00087,Asked how the infection signal compares with RIMVEXA. Said his patients read about JAK warnings and assume all advanced,SAFETY_TOLERABILITY,S06-V0,S06
+ARC-00031,Says he cannot position it as a long term agent until he sees OLE data past 100 wks.,EFFICACY_REAL_WORLD,S02-V2,S02
+ARC-00113,Complained that teh IV induction means competing with oncology for infusion slots. That alone pushes him toward an oral first.,DOSING_ADMINISTRATION,S07-V1,S07
+ARC-00430,Discussed the standard response document on infusion reactions.,SUMMARY_NO_INSIGHT,NOISE-10,NOISE-10
+ARC-00345,Two elderly pts cannot depress the autoinjector plunger. One gave up and the daughter now does it.,PATIENT_EXPERIENCE_ADHERENCE,S26-V0,S26
+ARC-00468,"Confirmed his assistant is Marta, best route in for future scheduling.",LOGISTICS,NOISE-03,NOISE-03
+ARC-00201,Said the step edit is the whole story on positioning. Change the step edit and his prescribing changes.,ACCESS_REIMBURSEMENT,S13-V2,S13
+ARC-00120,Their unit runs at capacity; adding a three-infusion induction for each new UC start is not sustainable.,DOSING_ADMINISTRATION,S07-V2,S07
+ARC-00133,Made the point that requested information on management around pregnancy planning; he has two pts of childbearing age asking.,DOSING_ADMINISTRATION,S08-V2,S08
+ARC-00483,Next steps: schedule a follow up in Q3.,LOGISTICS,NOISE-12,NOISE-12
+ARC-00396,We reviewed the AURORA-1 primary endpoint slides.,SUMMARY_NO_INSIGHT,NOISE-07,NOISE-07
+ARC-00143,Positioning is post anti-TNF and post JAK in his practice. Admitted this is inertia as,PATIENT_SELECTION_POSITIONING,S09-V1,S09
+ARC-00202,Said the step edit is the whole story on positioning. Change the step edit and his prescribing changes.,ACCESS_REIMBURSEMENT,S13-V2,S13
+ARC-00465,He is travelling to the congress and offered to meet there.,SUMMARY_NO_INSIGHT,NOISE-05,NOISE-05
+ARC-00400,Next steps: schedule a follow up in Q3.,LOGISTICS,NOISE-12,NOISE-12
+ARC-00371,He asked to be removed from the newsletter distribution.,LOGISTICS,NOISE-13,NOISE-13
+ARC-00099,"Mentioned that saw ALT rise to about 2x upper limit in two induction pts. Both normalised by wk 12 w/o stopping, but he ordered a full hepatology work-up on the first one.",SAFETY_TOLERABILITY,S06b-V0,S06b
+ARC-00069,Reported that three of his patients have had significant injection site reactions - redness and burning lasting several days. One is talking about stopping.,SAFETY_TOLERABILITY,S05-V0,S05
+ARC-00349,Device feedback - his patients with arthritis struggle with the activation force. He asked if a different,PATIENT_EXPERIENCE_ADHERENCE,S26-V1,S26
+ARC-00220,Raised the site of care issue. Community practices are opting out entirely.,ACCESS_REIMBURSEMENT,S14-V2,S14
+ARC-00412,Discussed the standard response document on infusion reactions.,SUMMARY_NO_INSIGHT,NOISE-10,NOISE-10
+ARC-00227,"Said the unmet need is ASUC, not the outpatient with moderate disease.",UNMET_NEED,S15-V1,S15
+ARC-00435,"Coffee was terrible, as usual.",LOGISTICS,NOISE-00,NOISE-00
+ARC-00106,Asked whether transient transaminitis in the first eight weeks is expected and whether he should be monitoring more or less,SAFETY_TOLERABILITY,S06b-V2,S06b
+ARC-00205,Payer policy at the regional plan mandates prior anti-TNF and prior JAK failure before,ACCESS_REIMBURSEMENT,S13-V3,S13
+ARC-00136,Raised that requested information on management around pregnancy planning; he has two patients of childbearing age asking.,DOSING_ADMINISTRATION,S08-V2,S08
+ARC-00355,Said the pen is stiff. A pt reported the cap was extremely hard to remove and she cracked,PATIENT_EXPERIENCE_ADHERENCE,S26-V2,S26
+ARC-00298,Said his referral network has no idea what is enrolling. Referrals dried up after the,CLINICAL_TRIAL_EXPERIENCE,S21-V1,S21
+ARC-00354,Said the pen is stiff. A patient reported the cap was extremely hard to remove and she cracked it trying.,PATIENT_EXPERIENCE_ADHERENCE,S26-V2,S26
+ARC-00388,Follow up: send him the reprint and the trial site list.,LOGISTICS,NOISE-11,NOISE-11
+ARC-00129,Wanted written guidance on holding doses around elective colectomy and when to restart post-op.,DOSING_ADMINISTRATION,S08-V1,S08
+ARC-00320,Said a biomarker would change everything - he would move it first line for a marker-positive,DIAGNOSTIC_MONITORING,S23-V1,S23
+ARC-00359,Adherence drops off once patinets feel better. He wants something patient-facing that explains why maintenance matters.,PATIENT_EXPERIENCE_ADHERENCE,S27-V0,S27
+ARC-00295,asked for a simple one page list of open studies he can hand to referring physicians.,CLINICAL_TRIAL_EXPERIENCE,S21-V0,S21
+ARC-00331,"Said the pathway is the gatekeeper, not the individual physician. He cannot deviate without a form.",GUIDELINES_PRACTICE_PATTERNS,S24-V1,S24
+ARC-00463,"Reminded him about the advisory board invitation, he will check dates.",LOGISTICS,NOISE-06,NOISE-06
+ARC-00192,Wants a comparative trial. Said network meta-analyses do not move him.,COMPETITIVE_LANDSCAPE,S12-V2,S12
+ARC-00322,Very interested in teh predictive biomarker work presented at ECCO. Wants to know if it is being taken forward.,DIAGNOSTIC_MONITORING,S23-V2,S23
+ARC-00409,Follow up: send him the reprint and the trial site list.,LOGISTICS,NOISE-11,NOISE-11
+ARC-00146,Said the drug sits behind two other agents in their pathway and nobody has revisited that pathway since it was written.,PATIENT_SELECTION_POSITIONING,S09-V2,S09
+ARC-00066,Wanted to know if anyone has tried q2w dosing after loss of response and whether it recaptures anything.,EFFICACY_REAL_WORLD,S04-V2,S04
+ARC-00065,Wanted to know if anyone has tried q2w dosing after loss of resp and whether it recaptures anything.,EFFICACY_REAL_WORLD,S04-V2,S04
+ARC-00237,Pouch patients are invisible in all the programmes. He treats them off label with,UNMET_NEED,S16-V1,S16
+ARC-00374,Rescheduled from last Tuesday due to his clinic overrunning.,LOGISTICS,NOISE-01,NOISE-01
+ARC-00417,He asked to be removed from the newsletter distribution.,LOGISTICS,NOISE-13,NOISE-13
+ARC-00392,"Walked through the mechanism of action deck, no questions.",SUMMARY_NO_INSIGHT,NOISE-08,NOISE-08
+ARC-00401,Shared the published induction manuscript reprint.,SUMMARY_NO_INSIGHT,NOISE-09,NOISE-09
+ARC-00078,One of his patients described the injection as stinging badly for a couple of minutes; she has developed a firm red area at the site each time.,SAFETY_TOLERABILITY,S05-V2,S05
+ARC-00074,ISRs came up unprompted. He said the label rate does not match what he is seeing and it is,SAFETY_TOLERABILITY,S05-V1,S05
+ARC-00444,Discussed the standard response document on infusion reactions.,SUMMARY_NO_INSIGHT,NOISE-10,NOISE-10
+ARC-00209,Raised that the community group next door will not stock it - the acquisition cost vs reimbursement does not work for them.,ACCESS_REIMBURSEMENT,S14-V0,S14
+ARC-00312,Their pathway is calpro-driven. Wanted the correlation between calprotectin and endoscopic outcome in the,DIAGNOSTIC_MONITORING,S22-V2,S22
+ARC-00332,"Said the pathway is the gatekeeper, not the individual physician. He cannot deviate without a form.",GUIDELINES_PRACTICE_PATTERNS,S24-V1,S24
+ARC-00437,Rescheduled from last Tuesday due to his clinic overrunning.,LOGISTICS,NOISE-01,NOISE-01
+ARC-00335,Institutional protocol has not been revised since before approval so it is not in there at,GUIDELINES_PRACTICE_PATTERNS,S24-V2,S24
+ARC-00291,Protocol burden came up - specifically the number of colonoscopies and the central,CLINICAL_TRIAL_EXPERIENCE,S20-V2,S20
+ARC-00393,"Reminded him about the advisory board invitation, he will check dates.",LOGISTICS,NOISE-06,NOISE-06
+ARC-00454,Follow up: send him the reprint and the trial site list.,LOGISTICS,NOISE-11,NOISE-11
+ARC-00119,Their unit runs at capacity; adding a three-infusion induction for each new UC start is not sustainable.,DOSING_ADMINISTRATION,S07-V2,S07
+ARC-00100,"Raised that saw ALT rise to about 2x upper limit in two induction patients. Both normalised by week 12 without stopping, but he ordered a full hepatology work-up on the first one.",SAFETY_TOLERABILITY,S06b-V0,S06b
+ARC-00244,Raised post-colectomy patients as a completely unserved group.,UNMET_NEED,S16-V2,S16
+ARC-00361,Said his no-show rate for maintenance is climbing among patients in remission.,PATIENT_EXPERIENCE_ADHERENCE,S27-V1,S27
+ARC-00079,One of his patients described the injection as stinging badly for a couple of minutes; she has developed a firm red area at the site each time.,SAFETY_TOLERABILITY,S05-V2,S05
+ARC-00219,Raised the site of care issue. Community practices are opting out entirely.,ACCESS_REIMBURSEMENT,S14-V2,S14
+ARC-00317,Said a biomarker would change everything - he would move it first line for a marker-positive,DIAGNOSTIC_MONITORING,S23-V1,S23
+ARC-00496,Follow up: send him the reprint and the trial site list.,LOGISTICS,NOISE-11,NOISE-11
+ARC-00033,"Durability came up again - he wants week 104 numbers, ideally with endoscopic outcomes not just clinical remission.",EFFICACY_REAL_WORLD,S02-V3,S02
+ARC-00038,Flagged that the mtx dataset ends exactly where his clinical q begins.,EFFICACY_REAL_WORLD,S02-V4,S02
+ARC-00256,Said endoscopic improvement is table stakes now and histologic remission is the differentiator.,DATA_GAP_EVIDENCE_NEED,S17-V2,S17
+ARC-00207,Payer policy at the regional plan mandates prior anti-TNF and prior JAK,ACCESS_REIMBURSEMENT,S13-V3,S13
+ARC-00243,Raised post-colectomy patients as a completely unserved group.,UNMET_NEED,S16-V2,S16
+ARC-00489,"Walked through the mechanism of action deck, no questions.",SUMMARY_NO_INSIGHT,NOISE-08,NOISE-08
+ARC-00117,Their unit runs at capacity; adding a three-infusion induction for each new UC start is not,DOSING_ADMINISTRATION,S07-V2,S07
+ARC-00252,Histology is where the field is going. He wants to see Geboes or Nancy index data.,DATA_GAP_EVIDENCE_NEED,S17-V1,S17
+ARC-00471,"Reminded him about the advisory board invitation, he will check dates.",LOGISTICS,NOISE-06,NOISE-06
+ARC-00107,asked whether transient transaminitis in the first eight wks is expected and whether he should be monitoring more or less often.,SAFETY_TOLERABILITY,S06b-V2,S06b
+ARC-00431,"Parking at the medical centre is a nightmare, allow extra time.",LOGISTICS,NOISE-04,NOISE-04
+ARC-00339,Said he is waiting for the guideline refresh before changing sequencing. Expects it after DDW.,GUIDELINES_PRACTICE_PATTERNS,S25-V0,S25
+ARC-00068,Wanted to know if anyone has tried q2w dosing after loss of response and whether,EFFICACY_REAL_WORLD,S04-V2,S04
+ARC-00176,Convenience is beating mechanism in his clinic. The oral option is simply easier for everyone.,COMPETITIVE_LANDSCAPE,S11-V2,S11
+ARC-00009,Main comment was about speed of response. Said patients and referring docs get anxious around week 5 when nothing,EFFICACY_REAL_WORLD,S01-V2,S01
+ARC-00277,Wants the ADA data broken out by whether patients were on a thiopurine.,DATA_GAP_EVIDENCE_NEED,S19-V2,S19
+ARC-00047,Made the point that his practice is almost all bio-experienced and the AURORA population was not.,EFFICACY_REAL_WORLD,S03-V1,S03
+ARC-00266,Said without TDM he cannot tell mechanical failure from immunogenicity when someone loses response.,DATA_GAP_EVIDENCE_NEED,S18-V2,S18
+ARC-00319,Said a biomarker would change everything - he would move it first line for a marker-positive pt tomorrow.,DIAGNOSTIC_MONITORING,S23-V1,S23
+ARC-00211,Made the point that the community group next door will not stock it - the acquisition cost versus reimbursement does not work for them.,ACCESS_REIMBURSEMENT,S14-V0,S14
+ARC-00413,Shared the published induction manuscript reprint.,SUMMARY_NO_INSIGHT,NOISE-09,NOISE-09
+ARC-00408,"Walked through the mechanism of action deck, no questions.",SUMMARY_NO_INSIGHT,NOISE-08,NOISE-08
+ARC-00193,Mentioned that pA requires two prior advanced therapy failures at both his major payers. That is why it is third line.,ACCESS_REIMBURSEMENT,S13-V0,S13
+ARC-00063,Brought up secondary LOR. Said it feels like the same pattern he sees w/ anti-TNFs at the one year mark.,EFFICACY_REAL_WORLD,S04-V1,S04
+ARC-00491,Shared the published induction manuscript reprint.,SUMMARY_NO_INSIGHT,NOISE-09,NOISE-09
+ARC-00276,Immunogenicity question again - is combination therapy needed or is monotherapy sufficient?,DATA_GAP_EVIDENCE_NEED,S19-V1,S19
+ARC-00426,Rescheduled from last Tuesday due to his clinic overrunning.,LOGISTICS,NOISE-01,NOISE-01
+ARC-00360,Adherence drops off once patients feel better. He wants something patient-facing that explains,PATIENT_EXPERIENCE_ADHERENCE,S27-V0,S27
+ARC-00206,Payer policy at the regional plan mandates prior anti-TNF and prior JAK failure before,ACCESS_REIMBURSEMENT,S13-V3,S13
+ARC-00024,Wanted to know what happens after year one. Said the 52 week data is fine but every biologic looks good at 52 weeks.,EFFICACY_REAL_WORLD,S02-V0,S02
+ARC-00083,Says the injection site reactions are the single biggest tolerability complaint he hears at follow-up visits.,SAFETY_TOLERABILITY,S05-V3,S05
+ARC-00453,He is travelling to the congress and offered to meet there.,SUMMARY_NO_INSIGHT,NOISE-05,NOISE-05
+ARC-00414,Follow up: send him the reprint and the trial site list.,LOGISTICS,NOISE-11,NOISE-11
+ARC-00375,He was 20 minutes late; we had about 25 minutes in total.,LOGISTICS,NOISE-02,NOISE-02
+ARC-00485,"Coffee was terrible, as usual.",LOGISTICS,NOISE-00,NOISE-00
+ARC-00241,Raised post-colectomy patients as a completely unserved group.,UNMET_NEED,S16-V2,S16
+ARC-00071,Reported that three of his patients have had significant injection site reactions - redness and burning lasting several days. One is,SAFETY_TOLERABILITY,S05-V0,S05
+ARC-00248,asked whether AURORA-2 captured histologic remission. Said that is the endpoint his academic colleagues now argue for.,DATA_GAP_EVIDENCE_NEED,S17-V0,S17
+ARC-00428,Follow up: send him the reprint and the trial site list.,LOGISTICS,NOISE-11,NOISE-11
+ARC-00255,Said endoscopic improvement is table stakes now and histologic remission is the differentiator.,DATA_GAP_EVIDENCE_NEED,S17-V2,S17
+ARC-00101,Mentioned mild LFT bumps during induction. Not clinically significant in his view but it generates phone calls and repeat labs.,SAFETY_TOLERABILITY,S06b-V1,S06b
+ARC-00016,"Noted a lag between starting induction adn any real clinical change; said he now counsels patients to expect two months, not one.",EFFICACY_REAL_WORLD,S01-V3,S01
+ARC-00420,Shared the published induction manuscript reprint.,SUMMARY_NO_INSIGHT,NOISE-09,NOISE-09
+ARC-00218,Raised the site of care issue. Community practices are opting out entirely.,ACCESS_REIMBURSEMENT,S14-V2,S14
+ARC-00061,Brought up secondary LOR. Said it feels like the same pattern he sees with anti-TNFs at the,EFFICACY_REAL_WORLD,S04-V1,S04
+ARC-00122,Said if there were a fully subcutaneous induction he would use the drug in twice as many,DOSING_ADMINISTRATION,S07-V3,S07
+ARC-00088,Asked how the infection signal compares with RIMVEXA. Said his patients read about JAK warnings and assume all advanced therapies carry them.,SAFETY_TOLERABILITY,S06-V0,S06

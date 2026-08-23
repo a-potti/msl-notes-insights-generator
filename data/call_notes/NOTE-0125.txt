@@ -1,0 +1,13 @@
+MSL Call Note | NOTE-0125
+Date: 2026-03-14 | MSL: J. Whitcombe (MSL-06) | Region: US-East
+HCP: Dr. K. Kowalczyk (KOL-029), Northgate University Hospital
+Interaction type: Congress interaction
+
+Key points:
+- Confirmed his assistant is Marta, best route in for future scheduling.
+- Wanted to know if anyone has tried q2w dosing after loss of response and whether it recaptures anything.
+- Rescheduled from last Tuesday due to his clinic overrunning.
+- Coffee was terrible, as usual.
+- Flagged that the maintenance dataset ends exactly where his clinical question begins.
+
+Follow-up: No follow-up required.

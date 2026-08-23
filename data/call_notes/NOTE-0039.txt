@@ -1,0 +1,12 @@
+MSL Call Note | NOTE-0039
+Date: 2026-06-02 | MSL: R. Okafor (MSL-01) | Region: US-East
+HCP: Dr. A. Nystrom (KOL-018), Ashgrove Community GI
+Interaction type: Virtual call
+
+Key points:
+- Asked for a simple one page list of open studies he can hand to referring physicians.
+- Said calprotectin is his de facto endpoint and asked whether it tracks with response in the AURORA data.
+- Confirmed his assistant is Marta, best route in for future scheduling.
+- Asked how the infection signal compares with RIMVEXA. Said his patients read about JAK warnings and assume all advanced therapies carry them.
+
+Follow-up: Route the question to Medical Information for a formal response.

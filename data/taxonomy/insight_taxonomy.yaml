@@ -1,0 +1,52 @@
+# InsightHub insight taxonomy v1
+
+categories:
+  EFFICACY_REAL_WORLD:
+    description: "Observed effectiveness in routine practice, including onset, durability and loss of response."
+  SAFETY_TOLERABILITY:
+    description: "Tolerability, adverse events, monitoring burden, and safety perceptions."
+  DOSING_ADMINISTRATION:
+    description: "Dose, schedule, route, infusion logistics, device and self-administration."
+  PATIENT_SELECTION_POSITIONING:
+    description: "Which patients, at which line of therapy, and how the product is sequenced."
+  COMPETITIVE_LANDSCAPE:
+    description: "Comparisons, switching behaviour and perceptions of other agents."
+  ACCESS_REIMBURSEMENT:
+    description: "Formulary, prior authorisation, payer policy, cost and acquisition barriers."
+  UNMET_NEED:
+    description: "Clinical problems that remain unsolved for patients or clinicians."
+  DATA_GAP_EVIDENCE_NEED:
+    description: "Evidence the clinician says is missing and would change their behaviour."
+  CLINICAL_TRIAL_EXPERIENCE:
+    description: "Site-level experience with trials: enrolment, protocol burden, referrals."
+  DIAGNOSTIC_MONITORING:
+    description: "Biomarkers, endoscopic scoring, treat-to-target monitoring practice."
+  GUIDELINES_PRACTICE_PATTERNS:
+    description: "Guideline interpretation, institutional pathways, local protocols."
+  PATIENT_EXPERIENCE_ADHERENCE:
+    description: "Patient-reported burden, preference, adherence and support needs."
+
+non_insight_labels:
+  LOGISTICS:
+    description: "Scheduling, travel, admin chatter with no medical content."
+  SUMMARY_NO_INSIGHT:
+    description: "A restatement of what the MSL presented, not what the HCP contributed."
+
+flags:
+  ADVERSE_EVENT:
+    description: "Any mention of an adverse experience in a patient taking a Kestrel product."
+  PRODUCT_COMPLAINT:
+    description: "Any complaint about the physical product, device, packaging or quality."
+  OFF_LABEL_REQUEST:
+    description: "An unsolicited request for information outside the approved label."
+  MEDICAL_INFORMATION_REQUEST:
+    description: "A question requiring a formal Medical Information response."
+
+strategic_priorities:
+  SP1: "Establish durability of response beyond one year"
+  SP2: "Support appropriate earlier-line positioning"
+  SP3: "Reduce access and prior-authorisation friction"
+  SP4: "Build the evidence base in difficult-to-treat populations"
+  SP5: "Improve the maintenance administration experience"
+
+sentiment: [positive, neutral, negative]

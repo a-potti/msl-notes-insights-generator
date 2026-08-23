@@ -1,0 +1,45 @@
+name: evals
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  fast:
+    # Tier 1: deterministic. No API key, no model download, runs on every commit.
+    runs-on: ubuntu-latest
+    env:
+      INSIGHTHUB_EMBED_BACKEND: hash
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install numpy pandas scikit-learn scipy pyyaml beautifulsoup4 lxml pypdf pytest
+      - run: python scripts/gen/generate.py
+      - run: pytest tests -q
+      - name: eval harness on the offline fixture
+        run: |
+          python scripts/make_mock_run.py --out runs/fixture.jsonl --split dev
+          python -m insighthub.evals.run --run runs/fixture.jsonl --split dev
+
+  slow:
+    # Tier 2: costs money. Nightly, or on the 'run-evals' label.
+    if: github.event_name == 'push' || contains(github.event.pull_request.labels.*.name, 'run-evals')
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install -r requirements.txt
+      - run: python scripts/gen/generate.py
+      - name: judge validation (must clear the bar before any judge number counts)
+        run: python scripts/ch5_judge_validation.py --version v2
+      - name: extract on the test split
+        run: python scripts/ch5_iterate.py --version v3 --split test --out runs/candidate.jsonl
+      - name: regression gate
+        run: python scripts/ci_gate.py --run runs/candidate.jsonl --baseline runs/baseline_test.jsonl --split test

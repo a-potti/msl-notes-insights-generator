@@ -1,0 +1,41 @@
+kol_id,name,institution,region,specialty,tier,publications,is_trial_investigator,guideline_committee,advisory_board_member,influence_score
+KOL-001,Dr. J. Saito,Fairmount Colorectal Group,US-West,Clinical Pharmacology,2,48,0,0,0,60.4
+KOL-002,Dr. B. Hollingsworth,St. Aldric's Hospital,EMEA,IBD Advanced Practice Nurse,2,19,0,0,0,55.3
+KOL-003,Dr. S. Vandermeer,Royal Thornbury Infirmary,EMEA,Gastroenterology - IBD,2,9,0,0,0,39.2
+KOL-004,Dr. G. Iyengar,Harbourview Institute of Digestive Health,APAC,Pediatric Gastroenterology,2,40,0,0,0,40.5
+KOL-005,Dr. A. Halvorsen,Lakeshore Gastroenterology Associates,US-Central,Gastroenterology - General,2,8,0,0,0,61.3
+KOL-006,Dr. J. Baptiste,Hôpital Saint-Brieuc-sur-Loire,EMEA,Pediatric Gastroenterology,3,8,0,1,0,27.5
+KOL-007,Dr. F. Castellanos,Cedar Ridge Health System,US-Central,Clinical Pharmacology,3,22,0,0,0,28.5
+KOL-008,Dr. S. Jelinek,Brightwater Medical Center,US-East,Gastroenterology - General,3,18,1,0,0,28.3
+KOL-009,Dr. D. Ulrich,Cedar Ridge Health System,US-Central,Pediatric Gastroenterology,2,34,1,0,0,51.3
+KOL-010,Dr. P. Achterberg,Hôpital Saint-Brieuc-sur-Loire,EMEA,Colorectal Surgery,2,60,0,0,0,57.7
+KOL-011,Dr. M. Wexler,Ashgrove Community GI,US-East,Colorectal Surgery,1,96,1,1,0,90.4
+KOL-012,Dr. A. Maddox,Brightwater Medical Center,US-East,Colorectal Surgery,2,8,1,0,1,47.4
+KOL-013,Dr. A. Dziedzic,Ashgrove Community GI,US-East,Gastroenterology - IBD,3,10,0,0,0,47.3
+KOL-014,Dr. S. Bello,Harbourview Institute of Digestive Health,APAC,Colorectal Surgery,2,63,0,1,0,52.4
+KOL-015,Dr. I. Grigoryan,St. Aldric's Hospital,EMEA,Gastroenterology - General,1,62,1,1,0,96.7
+KOL-016,Dr. D. Fitzharris,Cedar Ridge Health System,US-Central,Gastroenterology - General,1,60,0,1,1,88.6
+KOL-017,Dr. M. Ostrowski,Pacific Crest Medical Center,US-West,IBD Advanced Practice Nurse,1,70,1,0,0,91.4
+KOL-018,Dr. A. Nystrom,Ashgrove Community GI,US-East,Gastroenterology - General,3,7,0,0,0,41.0
+KOL-019,Dr. R. Kirkbride,Cedar Ridge Health System,US-Central,Gastroenterology - General,3,43,0,0,0,25.8
+KOL-020,Dr. C. Imhoff,Royal Thornbury Infirmary,EMEA,Pediatric Gastroenterology,1,44,1,0,1,77.2
+KOL-021,Dr. W. Zambrano,Sunridge Digestive Institute,US-West,Colorectal Surgery,2,40,0,0,0,51.5
+KOL-022,Dr. C. Aldridge,St. Aldric's Hospital,EMEA,Pediatric Gastroenterology,2,50,0,0,0,43.6
+KOL-023,Dr. T. Espinoza,Sunridge Digestive Institute,US-West,Clinical Pharmacology,1,100,0,0,1,88.3
+KOL-024,Dr. A. Gallardo,St. Aldric's Hospital,EMEA,Gastroenterology - IBD,2,23,0,0,1,48.3
+KOL-025,Dr. R. Pemberton,Cedar Ridge Health System,US-Central,IBD Advanced Practice Nurse,2,4,0,0,0,36.2
+KOL-026,Dr. E. Yilmaz,Northgate University Hospital,US-East,Pediatric Gastroenterology,2,56,0,0,0,53.5
+KOL-027,Dr. O. Duvall,Cedar Ridge Health System,US-Central,IBD Advanced Practice Nurse,1,78,0,0,0,81.3
+KOL-028,Dr. T. Farrow,Northgate University Hospital,US-East,Pediatric Gastroenterology,2,25,0,0,0,48.1
+KOL-029,Dr. K. Kowalczyk,Northgate University Hospital,US-East,Gastroenterology - General,1,77,1,1,1,91.3
+KOL-030,Dr. G. Xu,Fairmount Colorectal Group,US-West,Gastroenterology - IBD,3,10,0,0,0,35.7
+KOL-031,Dr. D. Nkemdirim,Pacific Crest Medical Center,US-West,Clinical Pharmacology,2,25,1,0,0,72.8
+KOL-032,Dr. S. Lindqvist,Brightwater Medical Center,US-East,IBD Advanced Practice Nurse,1,86,0,0,0,85.5
+KOL-033,Dr. G. Larue,Fairmount Colorectal Group,US-West,Clinical Pharmacology,1,84,0,1,0,97.8
+KOL-034,Dr. C. Quintero,Brightwater Medical Center,US-East,IBD Advanced Practice Nurse,1,88,1,0,1,96.2
+KOL-035,Dr. S. Thibault,Cedar Ridge Health System,US-Central,Colorectal Surgery,2,16,0,0,0,27.9
+KOL-036,Dr. T. Janowski,Lakeshore Gastroenterology Associates,US-Central,Gastroenterology - IBD,1,57,1,0,1,78.6
+KOL-037,Dr. R. Moreau,Meridian General Hospital,APAC,Clinical Pharmacology,3,20,0,0,1,39.0
+KOL-038,Dr. L. Rasmussen,Universitätsklinikum Rheinfeld,EMEA,Colorectal Surgery,2,60,1,0,0,56.7
+KOL-039,Dr. C. Corrigan,Hôpital Saint-Brieuc-sur-Loire,EMEA,Pediatric Gastroenterology,2,60,1,0,0,74.3
+KOL-040,Dr. W. Eriksen,Cedar Ridge Health System,US-Central,Gastroenterology - General,2,35,0,0,0,78.2

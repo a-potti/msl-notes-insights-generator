@@ -1,0 +1,27 @@
+# Core
+anthropic>=1,<2
+python-dotenv>=1.0.0
+
+# Data / ML
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+scipy>=1.11
+matplotlib>=3.8
+
+# Grounding
+sentence-transformers>=3.0     # local embeddings, no extra API key needed
+rank-bm25>=0.2.2
+pyyaml>=6.0
+beautifulsoup4>=4.12
+lxml>=5.0
+pypdf>=4.0
+python-docx>=1.1
+
+# Serving / ops
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2.6
+
+# Testing
+pytest>=8.0
