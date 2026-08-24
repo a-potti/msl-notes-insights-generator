@@ -74,6 +74,7 @@ CLASSIFY_TOOL = {
         "type": "object",
         "properties": {"category": {"type": "string"}},
         "required": ["category"],
+        "additionalProperties": False,
     },
     "strict": True,
 }

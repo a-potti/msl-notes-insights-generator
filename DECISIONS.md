@@ -355,7 +355,376 @@ matter for prioritization in Ch.5.
 
 ---
 
-<!-- Chapter 2 -->
+### D-009 — Text-classification bake-off: LLM wins decisively, and the classical learning curve is flat, not rising
+**Date:** 2026-08-24 | **Chapter:** 2
+
+**Observed.** `ch2_bakeoff.py` crashed on the same strict-schema bug as D-005
+(`additionalProperties` missing on `CLASSIFY_TOOL`'s `input_schema`) — a second, separate
+tool definition in this file that never got the Chapter 1 fix. Patched identically. Full
+results on 508 labelled sentences, 14 classes: TF-IDF naive CV 1.00 (a lie — near-duplicate
+leakage), TF-IDF grouped-by-variant 0.080, TF-IDF grouped-by-topic 0.028, embeddings
+grouped-by-variant 0.404, embeddings grouped-by-topic 0.164, LLM zero-shot Haiku 4.5 macro-F1
+0.662 ($1.65/1k, p50 0.97s), LLM zero-shot Sonnet 5 macro-F1 0.756 ($1.27/1k, p50 3.00s).
+Sonnet is simultaneously *more accurate and cheaper per 1k* than Haiku here — no cost/quality
+tradeoff at all, unlike D-006's extraction bake-off. Separately measured a genuine learning
+curve for embeddings+logreg on unseen-topic generalization (train on N randomly-sampled
+topics, test on the rest, 5 seeds per point, `topic_group`-grouped to prevent leakage):
+macro-F1 stayed flat between 0.057 and 0.090 across training sizes from 61 to 424 examples
+(effectively the whole dataset) — no upward trend at any point in that range.
+
+**Hypothesised.** The LLM-wins result matches the tutorial's stated rule (few labels,
+lexically diverse text, evolving taxonomy → LLM). The flat learning curve is the more
+important finding: it suggests the gap to the LLM isn't merely "not enough data yet" in a
+way a bit more labelling would close. A linear classifier over generic sentence embeddings
+may not generalise to genuinely novel topics at all within any data volume we could plausibly
+collect soon — the failure looks structural (representation/model capacity for this specific
+generalisation), not a data-volume shortfall the way TF-IDF's vocabulary-memorisation problem
+was. Sonnet's cost/accuracy dominance over Haiku is unexplained — plausibly fewer failed tool
+calls falling back to a default label, or a cache-economics difference — not yet investigated.
+
+**Changed.** Fixed `ch2_bakeoff.py`'s `CLASSIFY_TOOL` schema (added
+`"additionalProperties": false`). No modelling change made.
+
+**Result.** Bake-off runs clean end-to-end now. Learning-curve experiment is new evidence
+beyond what the tutorial asks for — it directly attempts the "at what N would you switch
+back to classical" question the script's closing line poses, and the honest answer is **we
+cannot estimate a crossover point from this evidence**, because there is no rising trend to
+extrapolate from, not merely "it's a big number."
+
+**Decided.** Do not plan around a classical-model crossover for topic-level categorisation
+using this embeddings+logreg approach — the current evidence gives no reason to expect one at
+any data volume incrementally larger than what we have. If Chapter 6 §6.7 revisits
+distillation economics, treat this as a red flag to test with a stronger classical approach
+(e.g. a better embedding model, or a small fine-tuned transformer) before assuming more
+labelled data alone would close the gap. **Not** doing: investigating why Sonnet beats Haiku
+on cost here — noted as an open question, not chased now, since it doesn't change the
+chapter's core routing decision (LLM for classification at current data volume either way).
+
+---
+
+### D-010 — Metric: P@40, derived from the actual review-queue capacity
+**Date:** 2026-08-24 | **Chapter:** 2
+
+**Observed.** Review capacity is 40 insights/week (`REVIEW_CAPACITY_PER_WEEK` in
+`triage.py`). logreg scores P@40=0.575 vs. rules baseline 0.475 vs. majority 0.300.
+ROC-AUC (0.768) reported alongside but not used for the decision — PR-AUC (0.468) is the
+honest secondary, since ROC-AUC flatters at this ~16-20% base rate (§1's D-006 made the
+same point about LLM faithfulness numbers looking better than they are in isolation).
+
+**Hypothesised.** Accuracy or F1 would optimise for a decision nobody is making — the real
+decision is always "which 40 does a human read this week," so the metric has to be
+precision at exactly that cutoff, not a threshold-free aggregate.
+
+**Changed.** Adopted P@40 as the primary reported metric for this model, PR-AUC secondary,
+ROC-AUC informational only.
+
+**Result.** N/A — metric choice, not a modelling result.
+
+**Decided.** Keep P@40 as primary. **Not** doing: reporting accuracy at all — with an
+83.6%-negative base rate it would be actively misleading even as a footnote.
+
+---
+
+### D-011 — Split: temporal, not random, and it surfaced a real base-rate shift
+**Date:** 2026-08-24 | **Chapter:** 2
+
+**Observed.** `temporal_split` (train = older rows, test = newer): train n=1,396, base rate
+14.1%; test n=604, base rate 20.5% — a 6.4-point shift, exactly reproducing the tutorial's
+numbers.
+
+**Hypothesised.** This is genuine label drift (recent insights get selected more often), not
+noise — a random split would have averaged it away and hidden a real property of the
+deployment setting: the model will be scored on data with a different base rate than it was
+trained on, every time, forever, because "newer" is always the deployment condition.
+
+**Changed.** Adopted temporal splitting everywhere in this chapter; never random.
+
+**Result.** Confirmed the shift is real and reproducible, not a fluke of one split.
+
+**Decided.** Keep temporal splitting as the standing rule for this dataset and any future
+InsightHub tabular model. **Not** doing: correcting for the shift by reweighting or
+re-sampling — that would hide it, and the model *should* be evaluated under the honest
+condition it'll actually face in production.
+
+---
+
+### D-012 — Feature exclusion (`days_since_captured`): the tutorial's predicted leak did not reproduce
+**Date:** 2026-08-24 | **Chapter:** 2
+
+**Observed.** Re-added `days_since_captured` to `NUMERIC` (removing it from `EXCLUDED`) and
+re-fit logreg. Tutorial claims this should make PR-AUC "jump." Measured result: PR-AUC
+0.4685 → 0.4690 (noise), ROC-AUC 0.7675 → 0.7679 (noise), P@40 identical at 0.575. Only
+Brier moved meaningfully (0.1418 → 0.1396, a mild improvement). Verified the feature really
+was included (checked the actual column list fed to the pipeline) and checked its raw
+correlation with the label within each split: -0.021 (train), -0.041 (test) — essentially
+zero.
+
+**Hypothesised.** The base-rate shift between train/test (D-011) is a shift in the *overall*
+proportion, not a per-row signal this feature carries — with near-zero within-split
+correlation, a linear model has nothing to exploit for ranking, even though the feature
+literally encodes the thing that's shifting. The leak this exercise is meant to demonstrate
+is real in principle (a time-position feature can leak) but doesn't manifest as a ranking
+metric jump on this particular generated dataset for this particular model.
+
+**Changed.** Nothing — `EXCLUDED` still drops `days_since_captured`. Confirmed the exclusion
+is correct in principle regardless of whether this dataset demonstrates the failure mode
+dramatically.
+
+**Result.** No PR-AUC jump observed; the exercise doesn't reproduce as written on this data.
+
+**Decided.** Keep excluding the feature — the *reasoning* (it doesn't have the same meaning
+at prediction time, and its value would be 0 for every genuinely new row in production) holds
+regardless of whether this particular dataset shows a dramatic metric jump when you violate
+it. **Not** doing: treating the muted result as evidence the exclusion doesn't matter — the
+production-time argument doesn't depend on the synthetic data cooperating.
+
+---
+
+### D-013 — Model: plain logistic regression, chosen on PR-AUC and Brier together
+**Date:** 2026-08-24 | **Chapter:** 2
+
+**Observed.** logreg: PR-AUC 0.468, Brier 0.142. logreg_balanced: PR-AUC 0.457, Brier 0.204
+(44% worse). GBM: PR-AUC 0.387, Brier 0.153 — worse than plain logreg on every metric with
+1,396 training rows and 12 features. All numbers reproduced exactly against the tutorial's
+table.
+
+**Hypothesised.** `class_weight="balanced"` re-weights the loss to fight the ~16-20% base
+rate, which distorts output probabilities for no ranking gain (P@40 identical to plain
+logreg) — a "should help" reflex that measurably doesn't. GBM overfits at this row count;
+the flexible model needs more data than we have to earn its complexity.
+
+**Changed.** Selected plain `logreg` (no class weighting) as the shipped model.
+
+**Result.** Confirmed across every reported metric, not just one.
+
+**Decided.** Ship plain logistic regression. Ship the *ranking* (sorted score), not a fixed
+probability threshold — §2.7's capacity-vs-EV conflict (D-015) means any fixed threshold
+will be wrong the moment the business changes review capacity. **Not** doing: reaching for
+GBM or any more complex model until there's evidence more data actually helps it win.
+
+---
+
+### D-014 — Significance: the P@40 advantage over rules is not yet proven
+**Date:** 2026-08-24 | **Chapter:** 2
+
+**Observed.** Bootstrap (`ch2_bootstrap.py`): logreg P@40 = 0.589, 95% CI [0.425, 0.750];
+rules P@40 = 0.491, 95% CI [0.325, 0.675]; paired difference +0.099, 95% CI
+[-0.100, +0.275], P(diff > 0) = 0.82. The CI on the difference includes zero. At wider k the
+advantage holds and grows (k=100: 0.480 vs 0.430; k=200: 0.415 vs 0.325).
+
+**Hypothesised.** At n=40 (our actual operating point), test-set noise is large enough that
+an 8-9 point P@40 edge isn't distinguishable from chance with 82% confidence, not 95%+. The
+consistency across k=40/100/200 is more convincing evidence than any single point estimate,
+because it's not the kind of pattern noise alone tends to produce.
+
+**Changed.** Nothing — logreg remains the shipped ranker regardless, since it's still the
+better bet even without proof, and there's no cost to using it over rules.
+
+**Result.** N/A — this entry is about honestly characterising the confidence in D-013's
+result, not changing it.
+
+**Decided.** Do not claim "the model beats the rules baseline" as a proven fact in any
+report or presentation — say "an ~8 point improvement, not yet statistically significant at
+our operating point, consistent at wider k" instead. **Not** doing: collecting more data
+right now purely to firm up this one comparison — noted as the honest caveat, revisit if the
+distinction becomes decision-relevant.
+
+---
+
+### D-015 — Capacity finding: EV-optimal threshold wants ~7.5x current review capacity
+**Date:** 2026-08-24 | **Chapter:** 2
+
+**Observed.** `sweep_thresholds` (logreg, cost_false_negative=2.0, cost_false_positive=0.15):
+expected value is maximised at threshold 0.1154, flagging 302 of 604 test items (tp=101,
+fp=201, fn=23, precision=0.334, recall=0.815, EV=24.85) — reproduced exactly against the
+tutorial. Actual capacity is 40/week.
+
+**Hypothesised.** The EV calculation is a real signal, not a modelling artefact: given the
+stated cost ratio (a miss costs ~13x a wasted read), the review queue is under-resourced
+relative to what would be optimal, not just relative to what the model would like to flag.
+
+**Changed.** Nothing about the model. This is a business-facing finding, not an engineering
+fix.
+
+**Decided.** Do not silently pick whatever threshold happens to produce ~40 flagged items
+and call the problem solved — that would hide the actual finding. Take the real number to
+the business: at capacity 40, ~18% of relevant insights get caught; doubling capacity to 80
+would remain well short of EV-optimal but would materially improve recall. **Not** doing:
+shipping a fixed threshold at all — ship the ranked list and let review capacity be a
+business-set parameter, per D-013.
+
+---
+
+### D-016 — Text classification: LLM zero-shot over classical, and the classical learning
+curve gives no reason to expect a near-term crossover
+**Date:** 2026-08-24 | **Chapter:** 2
+
+**Observed.** See D-009 for full detail and numbers (TF-IDF, embeddings, and both LLM rows).
+Summary: LLM zero-shot (Sonnet 5, macro-F1 0.756) beats the best classical row (embeddings,
+grouped-by-topic, 0.164) by roughly 4.6x, with zero labelled training examples against the
+classical rows' 400. A dedicated learning-curve experiment (embeddings+logreg, unseen-topic
+generalisation, 61-424 training examples) showed no upward trend at all — flat between 0.057
+and 0.090 across the whole range.
+
+**Hypothesised.** This is stronger and more specific than "the tutorial's stated rule
+(few labels → LLM) applies here" — it's direct evidence that more labelled data in the range
+we could plausibly collect soon would not close the gap, because the classical approach
+isn't demonstrating any learning in that range to begin with.
+
+**Changed.** Nothing — text classification stays LLM-based (Sonnet 5) for now.
+
+**Result.** Confirmed via the learning-curve experiment, not assumed from the tutorial's
+general rule.
+
+**Decided.** Revisit only after the review stream (Ch.5) has produced substantially more
+than the ~36 examples/class we tested up to here — and even then, test with a stronger
+classical approach (better embeddings, or a small fine-tuned model) before assuming volume
+alone fixes it, per D-009. **Not** doing: setting a specific "labels per class" revisit
+number — D-009 already showed a specific number would be fabricated precision given the flat
+curve.
+
+---
+
+### D-017 — Label bias: `selected_for_review` reflects historical reviewer behaviour, not ground truth
+**Date:** 2026-08-24 | **Chapter:** 2
+
+**Observed.** `selected_for_review` records what strategists historically chose to spend
+review time on (§2.2), not an independently verified importance label. Error analysis
+(§2.8) found confident false negatives clustering in `PATIENT_SELECTION_POSITIONING`,
+`COMPETITIVE_LANDSCAPE`, and `EFFICACY_REAL_WORLD` (21 total, vs. only 4 confident false
+positives spread thinly across other categories) — a plausible signature of the model
+learning a real historical under-selection pattern in those categories rather than making
+an error of its own.
+
+**Hypothesised.** If reviewers historically under-prioritised certain categories for reasons
+unrelated to actual importance (e.g. harder to act on quickly, requires cross-functional
+buy-in), a model trained on their choices will reproduce and appear to validate that
+pattern, entrenching it rather than correcting it.
+
+**Changed.** Nothing to the model — this is a known-limitation finding, not a fixable bug.
+
+**Decided.** Document this as a standing caveat on every presentation of model output: it
+predicts what a strategist would historically choose to review, not what is objectively most
+important. **Not** doing: attempting to "debias" the label without deeper input from the
+medical strategy team on which categories are actually under-served — that's an
+organisational question, not a modelling one.
+
+---
+
+### D-018 — §2.13 Exercise 1: deployment-time leak simulation also shows no collapse
+**Date:** 2026-08-24 | **Chapter:** 2
+
+**Observed.** Fit logreg with `days_since_captured` included (as in D-012), then scored the
+test set twice: once with real values, once with every row's value forced to 0 (simulating
+what a genuinely new insight looks like in production). PR-AUC 0.4690 → 0.4683, ROC-AUC
+0.7679 → 0.7670, P@40 unchanged at 0.575 — no collapse, consistent with D-012.
+
+**Hypothesised.** Follows directly from D-012: a feature the model assigned near-zero
+practical weight to (because it carries near-zero within-split correlation with the label)
+can't hurt the ranking much when zeroed out either. The exercise's premise is sound in
+general — a time-position feature *can* collapse a model that actually relies on it — it
+just doesn't apply to this specific generated dataset and this specific linear model.
+
+**Changed.** Nothing.
+
+**Decided.** No new action — reinforces D-012's decision to exclude the feature on the
+production-time-meaning argument, independent of whether this dataset dramatizes the
+consequence. **Not** doing: treating "it didn't collapse this time" as evidence the general
+caution is unnecessary elsewhere.
+
+---
+
+### D-019 — §2.13 Exercise 2: `cost_false_negative` cannot bring the EV-optimal threshold near capacity — only `cost_false_positive` can
+**Date:** 2026-08-24 | **Chapter:** 2
+
+**Observed.** Full threshold sweep (not just the 25-point quantile grid `sweep_thresholds`
+searches) at `cost_false_negative` from 10.0 down to 0.001: EV-optimal flagged count never
+dropped below ~299, even at near-zero miss cost. Swept `cost_false_positive` instead (fixing
+`cost_false_negative=2.0`): flagged count fell from 450 (cfp=0.15) to 26 (cfp=4.0), crossing
+near capacity=40 around cfp≈3.6-4.0 (ratio `cost_false_negative/cost_false_positive`≈0.5-0.55)
+— and at that crossover, expected value is deeply negative (~-220 to -235).
+
+**Hypothesised.** Structural, not a quirk of this data: the marginal condition for "is
+flagging item i profitable" reduces to `p_i > cost_false_positive / (value_true_positive +
+cost_false_negative + cost_false_positive)` — `cost_false_negative` only appears in a term
+that *raises* the profitable-to-flag bar as it shrinks toward the value_true_positive+cfp
+sum, pushing toward flagging *more*, never less. Only `cost_false_positive` can shrink the
+optimal flagged set. The exercise's framing (sweep `cost_false_negative` to find where the
+optimum reaches capacity) has no answer as posed.
+
+**Changed.** Nothing to the model.
+
+**Result.** A specific, falsifiable business claim: reaching capacity=40 via cost tuning
+alone requires believing false positives cost *more* than misses (inverted from D-015's
+current 13x-misses-cost-more assumption), and even then the policy is EV-negative under its
+own accounting.
+
+**Decided.** Do not attempt to "tune costs until the threshold matches capacity" as a way to
+avoid the D-015 capacity conversation — this exercise shows that path requires an
+economically incoherent set of beliefs (false positives costing more than misses) to even
+reach 40, and produces a value-destroying policy when it does. The real lever is capacity
+itself (D-015), not the cost parameters. **Not** doing: proposing a specific
+`cost_false_positive` value for production — these are illustrative, not measured, business
+costs.
+
+---
+
+### D-020 — §2.13 Exercise 3: fairness-ish audit finds a real, unexplained EMEA disparity
+**Date:** 2026-08-24 | **Chapter:** 2
+
+**Observed.** In the single global top-40 ranking (the actual deployment mechanism), recall
+of each region's true positives: APAC 0.258, US-West 0.250, US-East 0.185, US-Central 0.111,
+**EMEA 0.083** — EMEA insights are ~3x less likely to reach the shared weekly list than
+APAC's or US-West's. EMEA is the largest region in the raw corpus (60/140 notes, §0.4), so
+this isn't a thin-sample artefact. EMEA also has the lowest precision *among its own top-40
+entries* (0.333, worse than every other region) — yet scores respectably on an independent
+per-region P@40 (0.475, better than US-Central's 0.300 and US-West's 0.350). So EMEA insights
+rank reasonably well against each other but poorly when competing against other regions in
+the shared ranking.
+
+**Hypothesised.** Two live explanations, not distinguished by this data alone: (1) EMEA
+differs systematically on an input feature (KOL tier mix, novelty score distribution,
+category mix) that the model weights heavily, deflating EMEA's scores relative to
+comparable-quality insights elsewhere; (2) EMEA insights were historically under-selected by
+reviewers for reasons unrelated to importance (the D-017 label-bias risk, now with a
+specific, checkable regional signature rather than a general caveat).
+
+**Changed.** Nothing to the model — this is a finding requiring investigation, not a fix.
+
+**Decided.** Flag this to the medical strategy team before any deployment — a 3x
+cross-region recall disparity is not a minor footnote. **Not** doing: guessing which of the
+two hypotheses is correct or attempting a fix (reweighting, a region feature, a fairness
+constraint) without first checking the feature-distribution question above; acting on the
+wrong hypothesis could entrench the label bias rather than correct it.
+
+---
+
+### D-021 — §2.13 Exercise 4: the triage model has a real (diminishing-returns) learning curve, unlike the classification task in D-016
+**Date:** 2026-08-24 | **Chapter:** 2
+
+**Observed.** Retrained logreg on 10/25/50/75/100% of the temporal-split training set:
+PR-AUC 0.362 → 0.434 → 0.456 → 0.451 → 0.468 (n=139→349→698→1,047→1,396). Sharp gain from
+10%→25% (+0.072), then flattening (25%→100% only adds +0.034 total, with a slight dip at
+75% likely sampling noise).
+
+**Hypothesised.** Classic diminishing-returns shape — most of what these 8 numeric + 2
+categorical features can teach a linear model, they're already teaching it by ~350-700 rows.
+More data still helps marginally, but the model is closer to feature-limited than
+data-limited at current volume. This is a genuinely different shape from D-016's flat
+classification-learning-curve (0.057-0.090, no trend at all) — proof the flatness there was
+specific to that harder cross-topic generalisation problem, not a general property of "ML on
+this data."
+
+**Changed.** Nothing.
+
+**Decided.** More triage-model training data is worth collecting opportunistically (real,
+if modest, expected gain) — unlike D-016's classification task, where the evidence argues
+against expecting a data-volume fix at all. Keep both curves as the reference examples when
+Chapter 5 asks "how many eval examples do I need" (§2.13's own stated connection). **Not**
+doing: projecting a specific target row count from a 5-point curve — the shape (diminishing
+but not flat) is the actionable signal, not a precise extrapolated number.
+
+---
 
 <!-- Chapter 3 -->
 
