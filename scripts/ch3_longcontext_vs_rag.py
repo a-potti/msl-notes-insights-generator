@@ -31,23 +31,28 @@ JUDGE_TOOL = {
     "input_schema": {
         "type": "object",
         "properties": {
-            "grounded": {"type": "integer", "minimum": 1, "maximum": 5,
-                         "description": "5 = every claim traceable to a cited note; "
-                                        "1 = substantial unsupported content."},
-            "complete": {"type": "integer", "minimum": 1, "maximum": 5,
-                         "description": "5 = covers the relevant material; "
+            "grounded": {"type": "integer",
+                         "description": "1 to 5. 5 = every claim traceable to a cited "
+                                        "note; 1 = substantial unsupported content."},
+            "complete": {"type": "integer",
+                         "description": "1 to 5. 5 = covers the relevant material; "
                                         "1 = misses most of it."},
             "rationale": {"type": "string"},
         },
         "required": ["grounded", "complete", "rationale"],
+        "additionalProperties": False,
     },
     "strict": True,
 }
 
 
 def answer(question: str, notes_block: str) -> llm.LLMResult:
+    # claude-sonnet-5 emits an adaptive-thinking block even though `thinking`
+    # is never passed here, and it counts against max_tokens. At 1200 the
+    # 140-note condition burned the whole budget on thinking and returned
+    # stop_reason=max_tokens with empty text (judge then scored it a 1/1).
     return llm.call(
-        model=MODEL_WORK, max_tokens=1200, temperature=0.0,
+        model=MODEL_WORK, max_tokens=4096, temperature=0.0,
         system=[{"type": "text", "text": ANSWER_SYSTEM,
                  "cache_control": {"type": "ephemeral"}}],
         messages=[{"role": "user",

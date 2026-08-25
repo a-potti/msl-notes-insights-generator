@@ -726,7 +726,144 @@ but not flat) is the actionable signal, not a precise extrapolated number.
 
 ---
 
-<!-- Chapter 3 -->
+### D-022 — `repair_ocr` bug: clean numbers were being corrupted into dictionary words
+**Date:** 2026-08-24 | **Chapter:** 3
+
+**Observed.** §3.2's own "measure the cleaner in both directions" check
+(`repair_ocr(n.text) != n.text` across all 140 clean notes) found 3 false repairs
+(`NOTE-0005`, `NOTE-0042`, `NOTE-0050`), against the tutorial's expected `0`. Diffed each:
+all three had a clean `"100"` (as in "OLE data past 100 weeks") silently rewritten to
+`"loo"`. Traced the mechanism: `_fix_numeric("100")` correctly returns `None` (nothing to
+digitise), but the code then fell through unconditionally into letter-confusion candidate
+generation (`_candidates`), which reaches `"loo"` from `"100"` via three digit->letter
+swaps (`1->l`, `0->o`, `0->o`). Because this machine has `/usr/share/dict/words` installed
+and `"loo"` is a real English word, the lexicon-match branch accepted it — that branch has
+no confidence threshold at all, unlike the bigram-scoring fallback, which requires
+`min_gain=2.0`.
+
+**Hypothesised.** The `re.fullmatch(r"[A-Za-z|]{3,}", core)` guard existed in the function
+but was positioned *after* the lexicon-match loop, so it only protected the bigram-scoring
+path, not the (unconditional, unthresholded) lexicon-match path. A purely numeric token has
+no letter-shaped OCR ambiguity to begin with — there was never a reason to run it through
+letter-confusion repair at all.
+
+**Changed.** Moved the letter-shape guard earlier in `docs.py`'s `fix()` closure, right
+after the `_fix_numeric` check, so a non-letter-shaped token (e.g. already-clean digits)
+returns unchanged before candidate generation ever runs — closing the gap for both the
+lexicon-match and bigram-scoring paths at once.
+
+**Result.** False repairs on clean text: 3 -> 0, matching the tutorial's expected output.
+Verified the real OCR-damage repair (`ocr_call_note.txt`) still works correctly afterward
+(IDs, dates, and words like `Iooks`->`looks` all still repair as intended).
+
+**Decided.** Keep the fix. This is the kind of failure the section's own two-directional
+measurement discipline is designed to catch — and it did, on the first check. **Not**
+doing: removing `/usr/share/dict/words` from the lexicon to avoid this class of accident
+generally — the fix targets the actual defect (letter-repair running on non-letter tokens),
+not the coincidence that exposed it. Two smaller, separate case-preservation imperfections
+noticed in the same output (`OBJECT|VE`->`oBJECTIVE`, `AIdric's` not fully corrected to
+`Aldric's`) were flagged but not investigated — logged here as a pointer, not fixed.
+
+---
+
+### D-023 — Hybrid search (RRF) can bury the single best match; compound queries expose a second, separate embedding weakness
+**Date:** 2026-08-24 | **Chapter:** 3
+
+**Observed.** Investigated Q-027 ("Device usability problems for older patients," 6 gold
+notes) after it scored recall=0.00 at hybrid@10 in the §3.6 eval. `NOTE-0018` (explicitly
+about elderly patients unable to use an autoinjector) is vector-rank **1** (similarity
+0.377) but BM25-rank ~41 (near-zero lexical overlap) and lands at hybrid-rank 18-23
+depending on exact query wording — outside top-10 despite being the standout semantic
+match. Traced why: RRF sums *per-ranker* rank contributions
+(`1/(rrf_k+rank)`), so several notes ranking only moderately on *both* BM25 and vector
+(e.g. vec#12 + bm25#1) out-accumulate a note that is rank-1 on exactly one ranker and
+absent from the other. Separately, the other 5 gold notes for Q-027 all contain the
+identical, unambiguous device-usability sentence ("the pen is stiff... the cap was
+extremely hard to remove") but never mention patient age — and rank weakly (40-115) on
+*both* signals, not just BM25. These notes satisfy the gold label's relevance criterion
+(device usability, full stop) without containing the query's second concept (age), and a
+single dense query embedding represents both concepts jointly, diluting similarity for any
+document matching only one.
+
+**Hypothesised.** Two distinct, independent failure mechanisms, not one: (1) RRF's
+additive-per-ranker design structurally favours "moderately good on every signal" over "the
+single best match on exactly one signal" — a property of the fusion method itself, not a
+bug, but one the tutorial's "do not assume hybrid wins" caution doesn't specifically name.
+(2) Compound queries (two concepts joined in one string) are a genuine blind spot for
+single-vector embedding similarity: a document satisfying only one concept is
+under-ranked even when the *actual* relevance criterion (as encoded in the gold labels)
+only required that one concept.
+
+**Changed.** Nothing to the retrieval code — these are diagnosed failure modes, not yet
+fixed.
+
+**Result.** Confirmed via direct rank inspection (not aggregate metrics) — the aggregate
+hybrid numbers (recall@10=0.479, best of all three retrievers) fully hid both of these
+mechanisms; only reading a specific failing query's component ranks surfaced them.
+
+**Decided.** Do not treat Q-027-style zero-recall failures as "needs better embeddings" by
+default — check component ranks first, because the fix differs by mechanism: mechanism (1)
+might warrant a higher `pool` or a rank-boost for single-ranker top-1 hits; mechanism (2)
+is better addressed by decomposing compound queries into a semantic sub-query plus a
+metadata/keyword filter (per §3.8's filter guidance) rather than expecting one embedding to
+carry two concepts. **Not** doing: tuning `rrf_k` or `pool` reactively to fix this one
+query — that risks overfitting the fusion to a single eval case; the decomposition approach
+generalises, a parameter tweak here likely wouldn't.
+
+---
+
+### D-024 — §3.11 long-context-vs-RAG result was an artifact of an undersized `max_tokens`; corrected numbers match the tutorial's framing
+**Date:** 2026-08-25 | **Chapter:** 3
+
+**Observed.** First run of `ch3_longcontext_vs_rag.py --n 12` produced a result nothing like
+the tutorial's stated expectation ("long-context is competitive or slightly better on
+quality"): `all-140-notes` scored grounded=1.50, complete=1.33 — worse than both
+`hybrid-k10` (2.67, 2.00) and `hybrid-k30` (3.08, 2.25), and every one of the 12 queries hit
+the minimum 1/1 under `all-140-notes`, never a mix. Pulled one query out of the script
+directly: `stop_reason="max_tokens"`, `output_tokens=1200` (exactly the configured budget),
+and the response's only content block was a `thinking` block — zero characters of answer
+text reached the judge.
+
+**Hypothesised.** `claude-sonnet-5` emits an adaptive-thinking block even though
+`answer()` never passes a `thinking` parameter — thinking is not opt-in for this model tier,
+and thinking tokens count against `max_tokens` like any other output. `answer()`'s
+`max_tokens=1200` was sized without accounting for that. Reasoning over 140 notes (~20k
+input tokens) needs materially more thinking budget than reasoning over the 10-30 notes in
+the retrieval conditions, so specifically (and only) the `all-140-notes` condition burned
+its entire budget on thinking before emitting any answer text, across all 12 queries — the
+judge then correctly scored the resulting empty answers at the floor. This was never a
+finding about long-context quality; it was a starved-budget artifact that happened to point
+in a dramatic, plausible-looking direction.
+
+**Changed.** Raised `answer()`'s `max_tokens` from 1200 to 4096 in
+`scripts/ch3_longcontext_vs_rag.py`, with a comment recording the mechanism so it doesn't
+silently regress. Separately, before the first run, `JUDGE_TOOL`'s schema had the same
+strict-mode defect as D-005 and the `ch2_bakeoff.py` `CLASSIFY_TOOL` fix (`minimum`/
+`maximum` on an integer field, no top-level `additionalProperties: false`) — fixed
+pre-emptively this time rather than after a crash, since the pattern was now recognisable
+on sight. This is the third independent hand-written tool schema this tutorial run has hit
+this exact defect in.
+
+**Result.** Rerunning with the `max_tokens` fix flips the outcome to match the tutorial's
+stated direction: `all-140-notes` now leads or ties on quality (grounded 2.67, complete
+3.50) versus `hybrid-k10` (2.58, 2.08) and `hybrid-k30` (2.42, 2.67) — completeness in
+particular favours long-context by a wide margin, which makes sense: nothing relevant can
+be missing when every note is already in context. Real cost ratios are ~3.9x (`k10`) and
+~2.3x (`k30`), not the tutorial's stated "~12x" — this instance's corpus/pricing evidently
+differs — and latency is *higher* for long-context (23.4s p50) than either retrieval
+condition (14.8s, 19.6s), which the tutorial doesn't call out at all.
+
+**Decided.** Keep the `max_tokens` fix; the corrected numbers are the ones that go in the
+report, not the first run's. Headline conclusion matches §3.11's own framing once corrected:
+at this corpus size, retrieval's case is cost and latency, not accuracy — long-context
+is not just competitive here, it wins on quality. Flagging the recurring strict-schema bug
+as a pattern worth a pre-flight check (every new hand-written tool `input_schema` in this
+codebase needs `additionalProperties: false` at every object level and no `minimum`/
+`maximum` on numbers) rather than continuing to fix it reactively per-script. **Not** doing:
+chasing an exact match to the tutorial's "12x" cost figure — the direction (retrieval is
+meaningfully cheaper) is what transfers across instances, not the specific multiplier.
+
+---
 
 <!-- Chapter 4 -->
 

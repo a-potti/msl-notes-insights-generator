@@ -223,11 +223,19 @@ def repair_ocr(text: str, lexicon: set[str] | None = None,
         num = _fix_numeric(core)
         if num is not None:
             return tok.replace(core, num)
+        if not re.fullmatch(r"[A-Za-z|]{3,}", core):
+            # Not letter-shaped (e.g. already-clean digits like "100") — nothing
+            # for letter-confusion repair to do. Without this guard, a pure
+            # number can reach a coincidentally-real dictionary word (e.g.
+            # "100" -> "loo") via digit->letter confusion swaps and the
+            # unconditional lexicon-match branch below accepts it with no
+            # confidence check at all.
+            return tok
         cands = [c for c in _candidates(core) if c != core]
         for cand in sorted(cands, key=len):
             if cand.lower() in lexicon:
                 return tok.replace(core, cand)
-        if not cands or not re.fullmatch(r"[A-Za-z|]{3,}", core):
+        if not cands:
             return tok
         base = _bigram_score(core, model)
         best = max(cands, key=lambda c: _bigram_score(c, model))

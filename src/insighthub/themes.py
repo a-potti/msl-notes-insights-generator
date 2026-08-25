@@ -110,6 +110,7 @@ NAME_TOOL = {
                          "description": "0-based indices of members that do not belong."},
         },
         "required": ["name", "summary", "coherent", "outliers"],
+        "additionalProperties": False,
     },
     "strict": True,
 }
