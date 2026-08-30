@@ -31,7 +31,8 @@ AE_TERMS = [
     r"\banaphyla", r"\bdeath\b", r"\bdied\b", r"\bfatal\b", r"\bmalignan",
     r"\binjection site\b", r"\bISRs?\b", r"\bstinging\b", r"\bburning\b",
     r"\belevat(ed|ion)s? (in )?(ALT|AST|LFTs?|transaminase)", r"\btransaminitis\b",
-    r"\bLFT\b", r"\babnormal(ity|ities)?\b", r"\bdiscontinu", r"\bstopped (the )?(drug|treatment|therapy)\b",
+    r"\bLFT\b", r"\bALT\b", r"\bAST\b", r"\bhepatology\b",
+    r"\babnormal(ity|ities)?\b", r"\bdiscontinu", r"\bstopped (the )?(drug|treatment|therapy)\b",
     r"\bswelling\b", r"\bpain\b", r"\bpruritus\b", r"\bitch", r"\bdizz",
     r"\bshortness of breath\b", r"\btolerability\b", r"\bintoleran",
 ]
@@ -113,6 +114,7 @@ GATE_TOOL = {
         },
         "required": ["adverse_event", "product_complaint", "off_label",
                      "instructions_addressed_to_you", "evidence"],
+        "additionalProperties": False,
     },
     "strict": True,
 }

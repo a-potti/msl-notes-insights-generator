@@ -13,10 +13,10 @@ Costs ~$0.30 per version on the 60-example calibration set.
 import argparse
 
 from insighthub.config import MODEL_DEEP
-from insighthub.evals.judge import (JUDGE_V1, JUDGE_V2, correct_pass_rate,
+from insighthub.evals.judge import (JUDGE_V1, JUDGE_V2, JUDGE_V3, correct_pass_rate,
                                     validate_judge)
 
-VERSIONS = {"v1": JUDGE_V1, "v2": JUDGE_V2}
+VERSIONS = {"v1": JUDGE_V1, "v2": JUDGE_V2, "v3": JUDGE_V3}
 
 
 def show(name: str, val, show_dis: bool, limit: int) -> None:

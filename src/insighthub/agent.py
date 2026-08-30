@@ -177,7 +177,11 @@ def run_agent(
         messages = compact(messages)
         try:
             res = llm.call(
-                model=model, max_tokens=4096, temperature=0.0,
+                # claude-sonnet-5's adaptive thinking counts against max_tokens and
+                # scales with context size (see D-024) — 4096 was not enough once
+                # several tool results had accumulated (~24k input tokens), and the
+                # final synthesis call hit max_tokens with zero characters of answer.
+                model=model, max_tokens=8192, temperature=0.0,
                 system=[{"type": "text", "text": system,
                          "cache_control": {"type": "ephemeral"}}],
                 tools=registry.schemas(),
@@ -196,6 +200,17 @@ def run_agent(
             on_step(step)
 
         uses = res.tool_uses()
+        if res.stop_reason == "max_tokens":
+            # A turn cut off by max_tokens is never trustworthy, regardless of what
+            # partial content it contains: sometimes it's empty (thinking ate the
+            # whole budget), sometimes a truncated plan sentence, and sometimes a
+            # tool_use block whose arguments were cut mid-generation — tool_uses()
+            # only checks block type, so a broken call like that still shows up as
+            # non-empty `uses` and would otherwise slip past the check below. Route
+            # it through the same graceful-degradation path as running out of
+            # steps/cost, rather than acting on it or reporting it as "answered."
+            run.stopped_because = "model_max_tokens"
+            break
         if res.stop_reason != "tool_use" or not uses:
             run.answer = res.text
             run.stopped_because = run.stopped_because or "answered"
@@ -227,7 +242,7 @@ def run_agent(
                 on_step(tstep)
         messages.append({"role": "user", "content": results})
 
-    if not run.answer and run.stopped_because in ("max_steps", "max_cost"):
+    if not run.answer and run.stopped_because in ("max_steps", "max_cost", "model_max_tokens"):
         # Graceful degradation: ask for the best answer available rather than
         # returning nothing. A partial answer with a caveat beats an error.
         run.answer = _forced_answer(messages, registry, model, system, run)
@@ -237,15 +252,23 @@ def run_agent(
 def _forced_answer(messages, registry, model, system, run: AgentRun) -> str:
     try:
         res = llm.call(
-            model=model, max_tokens=2048, temperature=0.0,
+            model=model, max_tokens=4096, temperature=0.0,
             system=[{"type": "text", "text": system}],
             messages=messages + [{"role": "user", "content":
                                   "You have run out of budget. Answer now with what you "
                                   "have, and state plainly what you could not check."}],
             meta={"step": "agent_forced_answer"},
         )
+        # tokens_in/tokens_out were previously omitted here, leaving the audit
+        # trail (§4.12's "right to explanation") silently blank on this one path.
         run.steps.append(Step(n=999, kind="model", latency_s=res.latency_s,
-                              cost_usd=res.cost_usd, note="forced answer"))
+                              cost_usd=res.cost_usd, tokens_in=res.total_input,
+                              tokens_out=res.output_tokens, note="forced answer"))
+        if not res.text.strip():
+            # Even the last-resort call can hit max_tokens with nothing to show
+            # for it (see D-026) — say so rather than returning an empty string.
+            return (f"[agent stopped: {run.stopped_because}; forced-answer call "
+                    f"also produced no text (stop_reason={res.stop_reason})]")
         return res.text
     except Exception as exc:
         return f"[agent stopped: {run.stopped_because}; forced answer failed: {exc}]"

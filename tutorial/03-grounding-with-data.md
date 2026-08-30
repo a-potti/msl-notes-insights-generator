@@ -504,6 +504,18 @@ retrieval keeps weakening while the cost argument does not.** Design accordingly
 retrieval behind an interface so that "retrieve k=10" and "send the last 200 notes" are
 one config change apart.
 
+> **A word of caution before you trust your first run of this script.** Our first attempt
+> showed `all-140-notes` scoring *far* worse than either retrieval condition (near-floor on
+> both groundedness and completeness) — the opposite of "competitive." The cause wasn't
+> retrieval at all: the script's `answer()` call used a fixed `max_tokens` too small for
+> this model tier's adaptive thinking, which counts against that budget and can consume all
+> of it on a large context before any answer text is emitted — silently producing an empty
+> answer that the judge correctly scored at the floor. After fixing `max_tokens`, the result
+> flipped to match this section's expected direction (long-context wins on quality; real
+> cost ratios were ~2-4x, not exactly 12x). If your own long-context condition looks
+> unreasonably bad, check `stop_reason` on that call before concluding anything about
+> retrieval. Full trace in D-024 (`DECISIONS.md`).
+
 ---
 
 ## 3.12 Keeping data fresh

@@ -62,6 +62,51 @@ Return exactly one failure_mode when rejecting.
 """ + taxonomy_prompt_block()
 
 
+# ---------------------------------------------------------------------------
+# v3 — after error analysis on where v2 disagreed with the human labels. v2
+# collapsed to TPR=0.000: it rejected every insight phrased with a plural or
+# collective subject ("clinicians", "patients"), even when nothing in the text
+# claims a rate, majority or consensus. That is not what OVERGENERALISED is
+# supposed to mean — "clinicians see X" is standard third-person phrasing for
+# what one HCP conveyed, not a population claim on its own. The one change:
+# OVERGENERALISED now requires an explicit frequency/consensus signal, and the
+# prompt says directly that a plural subject alone is not disqualifying.
+# ---------------------------------------------------------------------------
+JUDGE_V3 = """You are the quality reviewer for a pharmaceutical Medical Affairs insight
+database. You decide whether a single extracted insight should be accepted.
+
+## Accept if ALL of these hold
+1. It reports something the HEALTHCARE PROFESSIONAL contributed — an observation,
+   question, concern or behaviour — not something the MSL did or presented.
+2. It is faithful to the source: no claim beyond what the note supports.
+3. It does not claim a rate, majority, or consensus across multiple clinicians or
+   patients that a single interaction cannot establish. "Clinicians see onset as
+   slower, typically 6-8 weeks" is fine — that is one HCP's observation narrated in
+   the field's normal third-person style, not a population claim. "Most clinicians
+   nationally find onset slower" is not — "most" and "nationally" assert a rate
+   across many sources. A plural subject ("clinicians", "patients") is NOT on its
+   own a reason to reject; look for an actual frequency/consensus word or number.
+4. The assigned category is the best fit in the taxonomy below.
+
+## Reject if ANY of these hold
+- ACTIVITY: describes what the MSL presented, shared or reviewed.
+- OVERGENERALISED: contains an explicit frequency, majority, or consensus claim
+  (e.g. "most", "the majority", "typically across", "nationally", "commonly",
+  a specific percentage) applied to more clinicians or patients than one
+  interaction could establish. Do not reject solely for a plural or collective
+  subject with no such claim attached.
+- UNSUPPORTED: adds a claim, number, or causal link the note does not contain.
+- MISCATEGORISED: the content is fine but the category is wrong.
+
+## How to judge
+Judge only what is in front of you. Do not imagine surrounding context that would make a
+borderline case acceptable. If you would need to assume something to accept it, reject it.
+
+Return exactly one failure_mode when rejecting.
+
+""" + taxonomy_prompt_block()
+
+
 JUDGE_TOOL = {
     "name": "judge_insight",
     "description": "Accept or reject one extracted insight.",
@@ -75,6 +120,7 @@ JUDGE_TOOL = {
             "rationale": {"type": "string", "description": "One sentence."},
         },
         "required": ["verdict", "failure_mode", "rationale"],
+        "additionalProperties": False,
     },
     "strict": True,
 }

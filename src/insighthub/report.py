@@ -113,7 +113,10 @@ def build_report(themes: list[Theme], registry: Registry, *,
 
     bundle = "\n\n".join(f"## {a.name}\n{a.text}" for a in analyses)
     res = llm.call(
-        model=writer_model, max_tokens=3000, temperature=0.3,
+        # claude-opus-5's adaptive thinking counts against max_tokens (see D-024,
+        # D-026) — give headroom beyond the 400-600 word target so thinking over
+        # up to 8 theme analyses can't starve the actual summary text.
+        model=writer_model, max_tokens=6000, temperature=0.3,
         system=[{"type": "text", "text": SYNTHESIS_SYSTEM,
                  "cache_control": {"type": "ephemeral"}}],
         messages=[{"role": "user", "content":

@@ -4,8 +4,8 @@
 `evals/run.py` — and then run three measured iterations on the extractor.*
 *Time: ~8 hours, and worth every one. API spend: ~$5.*
 
-**The skill:** Ng singles this out as *the* trait that distinguishes people who are good at
-this. Not prompt craft. Not architecture. The ability to run a disciplined error-analysis
+**The skill:** Andrew Ng singles this out as *the* trait that distinguishes people who are good at
+AI Engineering. Not prompt craft. Not architecture. The ability to run a disciplined error-analysis
 loop, so that progress is systematic rather than random.
 
 This chapter is long because the skill is hard, and because the part everyone skips —
@@ -202,6 +202,12 @@ code evals (pass rate over notes):
   !! 11 BLOCKING failures
 ```
 
+> **Our run diverged here.** Against the real `ch1_dev_v1.jsonl` (not the mock fixture),
+> `verbatim_is_substring`, `no_duplicate_verbatim` and `no_promotional_language` all came
+> back 100% pass — noticeably cleaner than this fixture's numbers. See D-025/D-032 in
+> `DECISIONS.md` for the full real report. Don't be surprised if your own run doesn't match
+> this block closely; it's the fixture's shape, not a target to hit.
+
 ### Exact checks vs heuristic checks
 
 This distinction is worth more than the checks themselves.
@@ -246,6 +252,19 @@ extraction vs labels (match threshold 0.55):
   category accuracy (matched pairs only) 0.847
 ```
 
+> **Our real run diverged sharply — worth reading before you form expectations.** Against
+> `ch1_dev_v1.jsonl` at threshold 0.55: `precision 0.345, recall 0.442, f1 0.388` — nowhere
+> near this fixture's 0.867/0.637/0.735. We traced it directly: many predicted insights that
+> are obviously thematically correct (verified by hand) score 0.45-0.55 cosine similarity
+> against their gold match, just under the cutoff — e.g. a prediction about oral-agent
+> preference in newly diagnosed patients scored 0.498 against gold's near-identical
+> statement. Two compounding causes, both real: `all-MiniLM-L6-v2` isn't paraphrase-tuned,
+> and gold's `canonical` text is a seed-level population statement (see `scripts/gen/world.py`)
+> rather than a note-scoped one — so a correctly-scoped, note-level prediction is
+> structurally penalised for following §5.3's own scope-of-claim rule. Full trace in
+> D-030 (`DECISIONS.md`). **Do not assume your numbers should look like this block's — check
+> your own threshold-sensitivity curve (below) before trusting any absolute number here.**
+
 Four things about this block:
 
 **Precision 0.87, recall 0.64.** The extractor is careful and misses a lot. Whether that's
@@ -272,6 +291,12 @@ matcher, not your extractor**, and any A/B comparison you run is noise. (With th
 fixture from `make_mock_run.py` the curve is perfectly flat, because the mock emits the
 gold text verbatim. Real runs vary. If yours is flat, check you're not evaluating a
 fixture.)
+
+> **Our real curve is the non-flat kind, and dramatically so:** `t=0.40 F1=0.674, t=0.55
+> F1=0.388, t=0.60 F1=0.310, t=0.70 F1=0.116` — a 56-point swing, nearly 4x this section's
+> own 15-point red flag. That's proof we're scoring real output (per the paragraph above),
+> and by this section's own stated rule, proof the 0.55 threshold's absolute numbers aren't
+> trustworthy for this corpus yet. See D-030.
 
 **The confidence intervals are the headline.** Recall is 0.637, and it is somewhere
 between 0.545 and 0.718. On 60 notes, that ±9-point band is what you have. **A prompt
@@ -335,6 +360,15 @@ concluded you were done.
 **This is the most common silent failure in LLM evaluation.** An unvalidated judge is a
 random number generator with good manners.
 
+> **Our real v1 failed in the opposite direction.** `n=60 accuracy=0.750 TPR=0.467
+> TNR=0.844 kappa=0.318` — a "no machine," not a "yes machine": it rejected more than half
+> of what a human would accept, while correctly rejecting most of what a human rejects. The
+> *conclusion* still holds (kappa 0.318 is poor agreement, v1 is not usable) — but if your
+> own run comes out lenient-in-the-other-direction like this, that's not a sign something
+> broke; it's a different underspecified-judge failure shape than this illustration, and it
+> means don't assume "yes machine" is the only way an unvalidated judge goes wrong. See
+> D-031.
+
 ---
 
 ## 5.7 Fixing the judge — the same loop, applied to the judge
@@ -388,6 +422,20 @@ human annotators. **Now** the judge can influence decisions.
 **Run this yourself before reading on.** If your v2 does not clear the bar, that is not a
 failure of the exercise — it is the exercise. Read your disagreements, make one more
 change, re-measure. That loop is the chapter.
+
+> **Our real v2 got dramatically worse, not better: `TPR=0.000 TNR=1.000 kappa=0.000`.**
+> Applied verbatim, it rejected *every single* human-PASS example. Every rejection cited the
+> same mechanism: any insight with a plural/collective subject ("clinicians", "patients")
+> got flagged OVERGENERALISED, whether or not the text made any actual frequency or
+> consensus claim — "Clinicians see a slower onset... typically 6-8 weeks" (human PASS)
+> was rejected purely for the word "Clinicians." This is exactly the loop above describes:
+> we wrote a `JUDGE_V3` restricting OVERGENERALISED to require an explicit
+> frequency/consensus signal and stating a plural subject alone isn't disqualifying — it
+> raised kappa to 0.381 but didn't clear the bar either, and TPR didn't move at all from
+> v1's. Full trace, including a deeper finding that the calibration harness never actually
+> gives the judge the source note it needs to check faithfulness against, in D-031. If your
+> v2 also doesn't converge in one step, you're not doing it wrong — read on for what "log it
+> and move to the next layer" looks like in practice.
 
 ### The bar, and the correction
 
@@ -471,6 +519,17 @@ Three legitimate readings, and you must pick one and write down why:
 
 **"The number didn't move" is a result.** Log it. Most of your iterations will look like
 this, and the ones that don't are usually leaks.
+
+> **Our real numbers moved differently than this illustration, but land on the same
+> lesson.** `not_msl_activity: 98.3% -> 100.0%` (perfect); `precision 0.345->0.407 (+0.062),
+> recall 0.442->0.504 (+0.062), f1 0.388->0.451 (+0.063)` — precision and recall moved up
+> *together*, not traded off against each other like the illustration above. The eval
+> script's own printed verdict: "Intervals overlap — this difference is NOT established."
+> Same conclusion as this section either way — keep the change (real, unambiguous win on
+> the targeted check; no metric moved backward even directionally), but don't claim the
+> precision/recall gain is proven at n=60. See D-032. Note our baseline recall differs
+> substantially from this section's 0.637 too, for the reasons in the §5.5 callout above —
+> if yours does too, that's the threshold-calibration issue compounding, not a new problem.
 
 ### Iteration 2 — attack the recall side
 

@@ -60,7 +60,8 @@ def make_search_notes(index: Index) -> Tool:
             "properties": {
                 "query": {"type": "string",
                           "description": "What was said, in the clinician's terms."},
-                "k": {"type": "integer", "minimum": 1, "maximum": 25, "default": 8},
+                "k": {"type": "integer",
+                      "description": "1 to 25. Defaults to 8."},
                 "region": {"type": "string",
                            "enum": ["US-East", "US-West", "US-Central", "EMEA", "APAC"]},
                 "kol_tier": {"type": "integer", "enum": [1, 2, 3]},
@@ -68,6 +69,7 @@ def make_search_notes(index: Index) -> Tool:
                 "until": {"type": "string", "description": "ISO date, inclusive"},
             },
             "required": ["query"],
+            "additionalProperties": False,
         },
         "strict": True,
     }
@@ -99,11 +101,12 @@ def make_search_evidence(index: Index) -> Tool:
             "type": "object",
             "properties": {
                 "query": {"type": "string"},
-                "k": {"type": "integer", "minimum": 1, "maximum": 15, "default": 6},
+                "k": {"type": "integer", "description": "1 to 15. Defaults to 6."},
                 "congress": {"type": "string",
                              "enum": ["UEGW-2025", "ECCO-2026", "DDW-2026"]},
             },
             "required": ["query"],
+            "additionalProperties": False,
         },
         "strict": True,
     }
@@ -135,6 +138,7 @@ def make_get_note() -> Tool:
             "properties": {"note_id": {"type": "string",
                                        "pattern": "^NOTE-[0-9]{4}$"}},
             "required": ["note_id"],
+            "additionalProperties": False,
         },
         "strict": True,
     }
@@ -175,7 +179,10 @@ def make_run_python() -> Tool:
             },
             "required": ["rows", "code"],
         },
-        "strict": True,
+        # No strict mode here: `rows` is an arbitrary-shaped dict the model copies
+        # back from earlier tool results, and strict schema's closed-object
+        # requirement (additionalProperties: false on every nested object) can't
+        # express "object with whatever keys the data happens to have."
     }
 
     ALLOWED = {"len", "sum", "min", "max", "sorted", "set", "list", "dict", "str",

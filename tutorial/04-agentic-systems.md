@@ -168,6 +168,18 @@ A: Three distinct drivers appear in the field notes this quarter...
 > Every one of those is a *prompt or tool-description* fix, not a model fix. Nearly all
 > agent debugging is reading transcripts.
 
+> **A real bug we hit here, worth checking for in your own transcripts.** Our first run of
+> this exact command ended with an empty `A:` and `stopped=answered` — not an error, a
+> *silent* empty success. The final model step had `stop_reason=max_tokens`: this model
+> tier's adaptive thinking counts against `max_tokens`, and on a large accumulated context
+> it can consume the whole budget before any answer text is written. `run_agent`'s loop
+> treated that stop reason exactly like a completed answer. We raised `max_tokens` and
+> added a check that routes any `max_tokens`-truncated turn through the same
+> graceful-degradation path as running out of steps/cost, rather than reporting it as
+> "answered." If your own transcript ever ends with a blank `A:` and a normal-looking
+> summary line, check `stop_reason` on the last MODEL step before trusting the answer is
+> real. Full trace in D-026 (`DECISIONS.md`).
+
 ---
 
 ## 4.4 Tool design is prompt engineering
